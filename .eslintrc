@@ -27,7 +27,10 @@
     "react/jsx-indent": [0],
     "no-trailing-spaces": [0],
     "react/react-in-jsx-scope": [0],
-    "semi": [0]
+    "semi": [0],
+    "jsx-a11y/img-redundant-alt": [0],
+    "no-empty":[0],
+    "no-lonely-if": [0]
   },
   "parserOptions": {
     "ecmaFeatures": {
