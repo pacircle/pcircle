@@ -1,4 +1,4 @@
-
+import {changeTestAction, changeTest} from './changeTest'
 
 export interface MainState {
   test: number,
@@ -9,7 +9,7 @@ export interface MainState {
 export const PREFIX = 'main'
 
 export const initState: MainState = {
-  test: null,
+  test: 0,
   list: ["商户列表","商品列表","购物车","个人中心"],
   nowList: 0
 }
@@ -20,5 +20,6 @@ export default {
   effects: {
   },
   reducers: {
+    changeTest: changeTest
   }
 }

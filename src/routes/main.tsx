@@ -2,6 +2,7 @@ import * as React from 'react'
 import {connect} from 'dva'
 import * as Redux from 'redux'
 import Commodity from "../components/main/commodity"
+import { changeTestAction } from '../models/main/changeTest'
 
 import {
   MainState as MainModelState, PREFIX as MainNamespace,
@@ -18,6 +19,9 @@ interface MainDispatcherProps {
 }
 
 class Main extends React.Component<MainProps & MainDispatcherProps, {}> {
+  componentDidMount(){
+    console.log(this.props.test)
+  }
 
   render() {
     const mainStyle = style({
@@ -33,20 +37,25 @@ class Main extends React.Component<MainProps & MainDispatcherProps, {}> {
       textAlign: 'center',
       background: 'white'
     })
-
-
+    const commodStyle = style({
+      margin: 'auto'
+    })
     return (
       <div className={mainStyle}>
         <div className={centerStyle}>
           <Header list={this.props.list}/>
-          <Commodity image={require("../assets/mini.jpg")} name={"test"} price={1.0} description={"cartoon picture"} shop={"Disney"} location={"BeiJing"}/>
+          <Commodity dispatch={this.props.dispatch}
+                     className={commodStyle}
+                     image={require("../assets/weini.jpg")}
+                     name={"test"} price={1.0}
+                     description={"cartoon picture"}
+                     shop={"Disney"}
+                     location={"BeiJing"}
+                     people={33}/>
         </div>
       </div>
     )
   }
-
-
-
 }
 
 function mapStateToProps(state: any): MainProps {
