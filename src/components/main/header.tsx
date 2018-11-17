@@ -1,11 +1,20 @@
 import React from 'react';
 import {style} from "typestyle";
+import {listProps} from "../../models/main";
+import {changeNowListAction} from "../../models/main/changeNowList";
+import * as Redux from 'redux'
 
 interface HeaderProps {
-  list: Array<string>
+  list: Array<listProps>,
+  nowList: number,
+  dispatch: Redux.Dispatch<any>
 }
 
 class Header extends React.Component<HeaderProps,{}> {
+
+  changeList(id){
+    this.props.dispatch(changeNowListAction(id))
+  }
 
   renderList(){
     const listStyle = style({
@@ -28,7 +37,7 @@ class Header extends React.Component<HeaderProps,{}> {
       <div className={listStyle}>
         {this.props.list.map((item) => {
           return (
-            <div className={tagStyle}>{item}</div>
+            <div className={tagStyle} onClick={this.changeList.bind(this,item.id)}>{item.name}</div>
           )})}
       </div>
     )

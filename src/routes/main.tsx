@@ -3,6 +3,7 @@ import {connect} from 'dva'
 import * as Redux from 'redux'
 import Commodity from "../components/main/commodity"
 import { changeTestAction } from '../models/main/changeTest'
+import {commodProps} from "../models/main/index";
 
 import {
   MainState as MainModelState, PREFIX as MainNamespace,
@@ -19,10 +20,41 @@ interface MainDispatcherProps {
 }
 
 class Main extends React.Component<MainProps & MainDispatcherProps, {}> {
+
   componentDidMount(){
     console.log(this.props.test)
   }
 
+  renderPage(){
+    console.log(this.props.list[this.props.nowList])
+    const commodStyle = style({
+      margin: 'auto'
+    })
+    if (this.props.nowList === 0){
+      return (
+        <Commodity dispatch={this.props.dispatch}
+                   className={commodStyle}
+                   image={require("../assets/weini.jpg")}
+                   name={"test"} price={1.0}
+                   description={"cartoon picture"}
+                   shop={"Disney"}
+                   location={"BeiJing"}
+                   people={33}/>
+      )
+    } else if (this.props.nowList === 1){
+      return (
+        <div>{this.props.list[this.props.nowList].name}</div>
+        )
+    } else if (this.props.nowList === 2){
+      return (
+        <div>{this.props.list[this.props.nowList].name}</div>
+      )
+    } else if (this.props.nowList === 3){
+      return (
+        <div>{this.props.list[this.props.nowList].name}</div>
+      )
+    }
+  }
   render() {
     const mainStyle = style({
       width: '100%',
@@ -37,21 +69,11 @@ class Main extends React.Component<MainProps & MainDispatcherProps, {}> {
       textAlign: 'center',
       background: 'white'
     })
-    const commodStyle = style({
-      margin: 'auto'
-    })
     return (
       <div className={mainStyle}>
         <div className={centerStyle}>
-          <Header list={this.props.list}/>
-          <Commodity dispatch={this.props.dispatch}
-                     className={commodStyle}
-                     image={require("../assets/weini.jpg")}
-                     name={"test"} price={1.0}
-                     description={"cartoon picture"}
-                     shop={"Disney"}
-                     location={"BeiJing"}
-                     people={33}/>
+          <Header list={this.props.list} nowList={this.props.nowList} dispatch={this.props.dispatch}/>
+          {this.renderPage()}
         </div>
       </div>
     )
