@@ -5,19 +5,28 @@ export interface listProps {
   name: string,
   id: number
 }
-export interface commodProps {
+export interface location {
+  lng: string
+  lat: string
+}
+export interface shopProps {
   id: string
   name: string
-  price: number
-  description : string
-  location: string
-  people: number
+  price: string
+  descripe : string
+  location: location
+  fans: string
+  server: string
+  des: string
+  logistics: string
+  type: string
 }
 
 export interface MainState {
   test: number,
   list: Array<listProps>,
   nowList: number,
+  shop: shopProps
 }
 
 export const PREFIX = 'main'
@@ -42,7 +51,23 @@ export const initState: MainState = {
       id: 3
     }
     ],
-  nowList: 0
+  nowList: 0,
+  shop: {
+    id: '0',
+    name: 'Disney',
+    price: '1',
+    descripe : 'description',
+    location: {
+      lat: '31',
+      lng: '144'
+    },
+    fans: '1',
+    server: '4',
+    des: '4',
+    logistics: '4',
+    type: 'play'
+
+  }
 }
 
 export default {

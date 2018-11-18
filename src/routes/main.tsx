@@ -3,7 +3,6 @@ import {connect} from 'dva'
 import * as Redux from 'redux'
 import Commodity from "../components/main/commodity"
 import { changeTestAction } from '../models/main/changeTest'
-import {commodProps} from "../models/main/index";
 
 import {
   MainState as MainModelState, PREFIX as MainNamespace,
