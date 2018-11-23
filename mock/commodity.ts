@@ -8,8 +8,8 @@ export default {
           "describe": '全球闻名遐迩的迪士尼，全称为The Walt Disney Company，取名自其创始人华特·迪士尼，是总部设在美国伯班克的大型跨国公司.',
           "fans": '3000',
           "location": {
-            lng: '31.2344',
-            lat: '144.222'
+            'lng': '31.2344',
+            'lat': '144.222'
           },
           "serve": '4.7',
           "des": '4.7',

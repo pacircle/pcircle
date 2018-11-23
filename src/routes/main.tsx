@@ -3,6 +3,7 @@ import {connect} from 'dva'
 import * as Redux from 'redux'
 import Commodity from "../components/main/commodity"
 import { changeTestAction } from '../models/main/changeTest'
+import {queryShopInfoAction} from "../models/main/shopinfo";
 
 import {
   MainState as MainModelState, PREFIX as MainNamespace,
@@ -21,7 +22,8 @@ interface MainDispatcherProps {
 class Main extends React.Component<MainProps & MainDispatcherProps, {}> {
 
   componentDidMount(){
-    console.log(this.props.test)
+    console.log(this.props.shop)
+    this.props.dispatch(queryShopInfoAction('/api/v1/commodity/index.json'))
   }
 
   renderPage(){
@@ -30,6 +32,7 @@ class Main extends React.Component<MainProps & MainDispatcherProps, {}> {
       margin: 'auto'
     })
     if (this.props.nowList === 0){
+      console.log(this.props.shop)
       return (
         <Commodity dispatch={this.props.dispatch}
                    className={commodStyle}

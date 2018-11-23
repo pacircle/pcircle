@@ -1,5 +1,6 @@
 import {changeTestAction, changeTest} from './changeTest'
 import {changeNowListAction,changeNowList} from './changeNowList'
+import {queryShopInfo,updateShopInfo} from "./shopinfo";
 
 export interface listProps {
   name: string,
@@ -74,9 +75,11 @@ export default {
   namespace: PREFIX,
   state: initState,
   effects: {
+    queryShopInfo: queryShopInfo
   },
   reducers: {
     changeTest: changeTest,
-    changeNowList: changeNowList
+    changeNowList: changeNowList,
+    updateShopInfo: updateShopInfo
   }
 }
