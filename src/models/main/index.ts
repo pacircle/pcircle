@@ -1,10 +1,23 @@
 import {changeTestAction, changeTest} from './changeTest'
 import {changeNowListAction,changeNowList} from './changeNowList'
 import {queryShopInfo,updateShopInfo} from "./shopinfo";
+import {queryFirstCommod,updateFirstCommod} from "./firstcommod";
+
+export interface commodProps {
+  id: string,
+  name: string,
+  price: string,
+  taobaoPrice: string,
+  description : string,
+  location: string,
+  people: number,
+  image: string
+}
 
 export interface listProps {
   name: string,
-  id: number
+  id: number,
+  key: number
 }
 export interface location {
   lng: string
@@ -14,20 +27,23 @@ export interface shopProps {
   id: string
   name: string
   price: string
+  fans:number
   descripe : string
   location: location
-  fans: string
-  server: string
-  des: string
-  logistics: string
+  serveScore: string
+  desScore: string
+  logiScore: string
   type: string
+  credit: number
+  owner: string
 }
 
 export interface MainState {
   test: number,
   list: Array<listProps>,
   nowList: number,
-  shop: shopProps
+  shop: shopProps,
+  commodList: Array<commodProps>
 }
 
 export const PREFIX = 'main'
@@ -37,49 +53,41 @@ export const initState: MainState = {
   list: [
     {
       name: "商品列表",
+      key: 0,
       id: 0
     },
     {
       name: "商户列表",
+      key: 1,
       id: 1
     },
     {
       name: "购物车",
+      key: 2,
       id: 2
     },
     {
       name: "个人中心",
+      key: 3,
       id: 3
     }
     ],
   nowList: 0,
-  shop: {
-    id: '0',
-    name: 'Disney',
-    price: '1',
-    descripe : 'description',
-    location: {
-      lat: '31',
-      lng: '144'
-    },
-    fans: '1',
-    server: '4',
-    des: '4',
-    logistics: '4',
-    type: 'play'
-
-  }
+  shop: null,
+  commodList: []
 }
 
 export default {
   namespace: PREFIX,
   state: initState,
   effects: {
-    queryShopInfo: queryShopInfo
+    queryShopInfo: queryShopInfo,
+    queryFirstCommod: queryFirstCommod
   },
   reducers: {
     changeTest: changeTest,
     changeNowList: changeNowList,
-    updateShopInfo: updateShopInfo
+    updateShopInfo: updateShopInfo,
+    updateFirstCommod: updateFirstCommod
   }
 }

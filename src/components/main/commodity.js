@@ -46,7 +46,7 @@ function Commodity(props) {
     textDecoration: 'underline',
   })
   const iconStyle = style({
-    width: '14px',
+    width: '20px',
     height: '14px',
     paddingLeft: '10px',
   })

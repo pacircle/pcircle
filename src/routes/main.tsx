@@ -4,6 +4,7 @@ import * as Redux from 'redux'
 import Commodity from "../components/main/commodity"
 import { changeTestAction } from '../models/main/changeTest'
 import {queryShopInfoAction} from "../models/main/shopinfo";
+import {queryFirstCommodAction} from "../models/main/firstcommod";
 
 import {
   MainState as MainModelState, PREFIX as MainNamespace,
@@ -22,22 +23,27 @@ interface MainDispatcherProps {
 class Main extends React.Component<MainProps & MainDispatcherProps, {}> {
 
   componentDidMount(){
-    console.log(this.props.shop)
     this.props.dispatch(queryShopInfoAction('/api/v1/commodity/index.json'))
+    this.props.dispatch(queryFirstCommodAction('/api/v1/commodity/598c5f37609fdf1e2f4dd8c9.json'))
   }
 
   renderPage(){
-    console.log(this.props.list[this.props.nowList])
+    if(this.props.commodList && this.props.commodList.length > 0){
+      console.log(this.props.commodList)
+    } else {
+      console.log('列表为空')
+    }
     const commodStyle = style({
       margin: 'auto'
     })
     if (this.props.nowList === 0){
-      console.log(this.props.shop)
       return (
         <Commodity dispatch={this.props.dispatch}
                    className={commodStyle}
+                   commodProps={this.props.commodList}
                    image={require("../assets/weini.jpg")}
-                   name={"test"} price={1.0}
+                   name={"test"}
+                   price={1.0}
                    description={"cartoon picture"}
                    shop={"Disney"}
                    location={"BeiJing"}

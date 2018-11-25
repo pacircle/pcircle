@@ -23,7 +23,7 @@ class Header extends React.Component {
         });
         return (<div className={listStyle}>
         {this.props.list.map((item) => {
-            return (<div className={tagStyle} onClick={this.changeList.bind(this, item.id)}>{item.name}</div>);
+            return (<div className={tagStyle} onClick={this.changeList.bind(this, item.id)} key={item.key}>{item.name}</div>);
         })}
       </div>);
     }
