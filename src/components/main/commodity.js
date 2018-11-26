@@ -5,7 +5,7 @@ import { style } from 'typestyle'
 function Commodity(props) {
   const mainStyle = style({
     border: '2px solid #F5F5F5',
-    margin: '7px',
+    margin: '15px',
   })
   const imgStyle = style({
     width: '90%',
@@ -39,7 +39,7 @@ function Commodity(props) {
     textAlign: 'left',
   })
   const shopStyle = style({
-    fontSize: '14px',
+    fontSize: '13px',
     width: '100%',
     paddingLeft: '8px',
     textAlign: 'left',
@@ -56,13 +56,14 @@ function Commodity(props) {
     width: '14px',
     height: '14px',
     float: 'right',
-    marginLeft: '85%',
+    marginLeft: '5%',
   })
   const bottomStyle = style({
     width: '100px',
     display: 'flex',
     height: '10%',
-    marginBottom: '8%'
+    marginBottom: '8%',
+    paddingTop: '5px',
   })
   return (
     <div className={mainStyle}>

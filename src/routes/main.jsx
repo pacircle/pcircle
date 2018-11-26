@@ -3,6 +3,8 @@ import { connect } from 'dva';
 import Commodity from "../components/main/commodity";
 import { queryShopInfoAction } from "../models/main/shopinfo";
 import { queryFirstCommodAction } from "../models/main/firstcommod";
+import { changeDetailAction } from "../models/main/changeDetail";
+import CommodDetail from "../components/main/commodDetail";
 import { PREFIX as MainNamespace, } from '../models/main/index';
 import { style } from "typestyle";
 import Header from "../components/header";
@@ -24,8 +26,8 @@ class Main extends React.Component {
             textAlign: 'center'
         });
         const commodStyle = style({
-            // margin: 'auto'
-            width: '200px',
+            // margin: 'auto',
+            width: '220px',
             height: '300px',
             whiteSpace: "nowrap",
             float: 'left'
@@ -33,7 +35,7 @@ class Main extends React.Component {
         if (this.props.nowList === 0) {
             return (<div className={containStyle}>
           {this.props.commodList.map((items) => {
-                return (<div className={commodStyle} key={items.id}>
+                return (<div className={commodStyle} key={items.id} onClick={this.commodClick.bind(this)}>
                 <Commodity key={items.id} commodProps={items} image={require("../assets/weini.jpg")}/>
               </div>);
             })}
@@ -49,25 +51,33 @@ class Main extends React.Component {
             return (<div>{this.props.list[this.props.nowList].name}</div>);
         }
     }
+    renderDetailPage() {
+        return (<div>
+        <CommodDetail />
+      </div>);
+    }
     render() {
         const mainStyle = style({
             width: '100%',
             height: '100vh',
-            background: "linear-gradient(to bottom,#A9A9A9,white)"
         });
         const centerStyle = style({
-            width: '60%',
+            width: '80%',
             height: '100vh',
             margin: 'auto',
             textAlign: 'center',
             background: 'white'
         });
         return (<div className={mainStyle}>
-        <div className={centerStyle}>
-          <Header list={this.props.list} nowList={this.props.nowList} dispatch={this.props.dispatch}/>
-          {this.renderPage()}
-        </div>
+        <Header list={this.props.list} nowList={this.props.nowList} dispatch={this.props.dispatch}/>
+        {this.props.detail ? this.renderDetailPage() : this.renderPage()}
       </div>);
+    }
+    commodClick(event) {
+        if (this.props.dispatch) {
+            this.props.dispatch(changeDetailAction(true));
+            console.log(this.props.detail);
+        }
     }
 }
 function mapStateToProps(state) {

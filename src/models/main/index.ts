@@ -2,6 +2,8 @@ import {changeTestAction, changeTest} from './changeTest'
 import {changeNowListAction,changeNowList} from './changeNowList'
 import {queryShopInfo,updateShopInfo} from "./shopinfo";
 import {queryFirstCommod,updateFirstCommod} from "./firstcommod";
+import {queryCommodInfoAction, updateCommodInfo} from "../commodity/querycommod";
+import {changeDetailAction,changeDetail} from "./changeDetail";
 
 export interface commodProps {
   id: string,
@@ -45,6 +47,7 @@ export interface MainState {
   nowList: number,
   shop: shopProps,
   commodList: Array<commodProps>
+  detail: boolean
 }
 
 export const PREFIX = 'main'
@@ -75,7 +78,8 @@ export const initState: MainState = {
     ],
   nowList: 0,
   shop: null,
-  commodList: []
+  commodList: [],
+  detail: true
 }
 
 export default {
@@ -89,6 +93,8 @@ export default {
     changeTest: changeTest,
     changeNowList: changeNowList,
     updateShopInfo: updateShopInfo,
-    updateFirstCommod: updateFirstCommod
+    updateFirstCommod: updateFirstCommod,
+    updateCommodInfo: updateCommodInfo,
+    changedetail: changeDetail
   }
 }

@@ -2,6 +2,8 @@ import { changeTest } from './changeTest';
 import { changeNowList } from './changeNowList';
 import { queryShopInfo, updateShopInfo } from "./shopinfo";
 import { queryFirstCommod, updateFirstCommod } from "./firstcommod";
+import { updateCommodInfo } from "../commodity/querycommod";
+import { changeDetail } from "./changeDetail";
 export const PREFIX = 'main';
 export const initState = {
     test: 0,
@@ -29,7 +31,8 @@ export const initState = {
     ],
     nowList: 0,
     shop: null,
-    commodList: []
+    commodList: [],
+    detail: true
 };
 export default {
     namespace: PREFIX,
@@ -42,7 +45,9 @@ export default {
         changeTest: changeTest,
         changeNowList: changeNowList,
         updateShopInfo: updateShopInfo,
-        updateFirstCommod: updateFirstCommod
+        updateFirstCommod: updateFirstCommod,
+        updateCommodInfo: updateCommodInfo,
+        changedetail: changeDetail
     }
 };
 //# sourceMappingURL=index.js.map

@@ -18,19 +18,22 @@ class Header extends React.Component<HeaderProps,{}> {
 
   renderList(){
     const listStyle = style({
-      float: 'right'
+      float: 'right',
+      textAlign: 'center'
     })
     const tagStyle = style({
       height: '25px',
       width: '70px',
-      background: 'linear-gradient(to bottom,#909090,grey)',
+      // background: 'linear-gradient(to bottom,#909090,grey)',
+      background: '#FFE4E1',
       borderRadius: '7px 7px 0 0',
       borderWidth: '1px',
-      color: 'white',
+      color: '#ff6600',
       fontSize: '13px',
       float: 'left',
       textHeight: '30px',
-      borderColor: 'grey'
+      borderColor: '#ff6600',
+      margin: '1px'
     })
 
     return (
@@ -51,7 +54,8 @@ class Header extends React.Component<HeaderProps,{}> {
       width: '250px',
       fontSize: '40px',
       height:'65px',
-      paddingTop: '30px'
+      paddingTop: '15px',
+      paddingLeft: '15px'
     })
     const spliteStyle =style({
       height: '1px',
@@ -61,7 +65,7 @@ class Header extends React.Component<HeaderProps,{}> {
     })
 
     const headStyle = style({
-      background: 'linear-gradient(to bottom,black,#c8c8c8)',
+      background: '#ff6600',
     })
 
     return (
