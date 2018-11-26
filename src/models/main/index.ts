@@ -11,7 +11,8 @@ export interface commodProps {
   description : string,
   location: string,
   people: number,
-  image: string
+  image: string,
+  shop: string,
 }
 
 export interface listProps {

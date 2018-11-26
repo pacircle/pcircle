@@ -4,14 +4,11 @@ import { style } from 'typestyle'
 
 function Commodity(props) {
   const mainStyle = style({
-    height: '300px',
-    width: '195px',
     border: '2px solid #F5F5F5',
-    margin: '10px',
+    margin: '7px',
   })
   const imgStyle = style({
-    width: '100%',
-    height: '70%',
+    width: '90%',
   })
   const numberStyle = style({
     height: '8%',
@@ -19,8 +16,15 @@ function Commodity(props) {
   const leftStyle = style({
     float: 'left',
     marginLeft: '10px',
+    color: '#858585',
+    fontSize: '14px',
+    textDecoration: 'line-through',
+  })
+  const taobaoStyle = style({
+    float: 'left',
+    marginLeft: '10px',
     color: '#FF6347',
-    fontSize: '16px',
+    fontSize: '17px',
   })
   const rightStyle = style({
     marginLeft: '100px',
@@ -28,16 +32,14 @@ function Commodity(props) {
     fontSize: '12px',
   })
   const desStyle = style({
-    height: '10%',
+    height: '8%',
     float: 'left',
     width: '100%',
     paddingLeft: '10px',
     textAlign: 'left',
   })
-
   const shopStyle = style({
     fontSize: '14px',
-    height: '100%',
     width: '100%',
     paddingLeft: '8px',
     textAlign: 'left',
@@ -60,18 +62,20 @@ function Commodity(props) {
     width: '100px',
     display: 'flex',
     height: '10%',
+    marginBottom: '8%'
   })
   return (
     <div className={mainStyle}>
       <img src={props.image} alt={'image'} className={imgStyle} />
       <div className={numberStyle}>
-        <div className={leftStyle}>¥{props.price}</div>
-        <div className={rightStyle}>{props.people}人付款</div>
+        <div className={taobaoStyle}>¥{props.commodProps.taobaoPrice}</div>
+        <div className={leftStyle}>¥{props.commodProps.price}</div>
+        <div className={rightStyle}>{props.commodProps.people}人付款</div>
       </div>
-      <div className={desStyle}>{props.description}</div>
+      <div className={desStyle}>{props.commodProps.description}</div>
       <div className={bottomStyle}>
         <img src={require('../../assets/menu.png')} className={iconStyle} alt={'menu'} />
-        <div className={shopStyle}>{props.shop}</div>
+        <div className={shopStyle}>{props.commodProps.shop}</div>
         <img src={require('../../assets/service.png')} className={serviceStyle} alt={'service'} />
       </div>
     </div>

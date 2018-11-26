@@ -1,6 +1,6 @@
 import React from 'react';
 import { style } from "typestyle";
-import { changeNowListAction } from "../../models/main/changeNowList";
+import { changeNowListAction } from "../models/main/changeNowList";
 class Header extends React.Component {
     changeList(id) {
         this.props.dispatch(changeNowListAction(id));
@@ -21,10 +21,12 @@ class Header extends React.Component {
             textHeight: '30px',
             borderColor: 'grey'
         });
-        return (<div className={listStyle}>
-        {this.props.list.map((item) => {
+        return (<div>
+        <div className={listStyle}>
+          {this.props.list.map((item) => {
             return (<div className={tagStyle} onClick={this.changeList.bind(this, item.id)} key={item.key}>{item.name}</div>);
         })}
+        </div>
       </div>);
     }
     render() {

@@ -1,29 +1,42 @@
 import { createAction } from "redux-actions";
 import { PREFIX } from "./index";
+import { somethingWrong } from "../../utils/error";
+import { request } from "../../utils/request";
 export function queryFirstCommodAction(url) {
     return createAction(`${PREFIX}/queryFirstCommod`)(url);
 }
 export function* queryFirstCommod(action, effects) {
-    const xhr = new XMLHttpRequest();
-    xhr.timeout = 3000;
-    xhr.responseType = "json";
-    xhr.open("GET", action.payload, true);
-    xhr.onload = function (e) {
-        if (xhr.status === 200 || xhr.status === 304) {
-            console.log('response.data');
-            console.log(xhr.response.data);
-            return xhr.response.data;
-        }
-    };
-    console.log('test');
-    xhr.ontimeout = function (e) {
-        console.log('请求时间超时');
-    };
-    xhr.send(null);
-    xhr.onloadend = function* () {
-        const commodProps = xhr.response.data;
-        yield effects.put(updateFirstCommodAction(commodProps));
-    };
+    const response = yield (() => {
+        return request(action.payload);
+    })();
+    const backendData = response.data;
+    console.log(response);
+    if (!response || response.err || !backendData || 200 != backendData.state) {
+        somethingWrong();
+        return;
+    }
+    const commodData = backendData.data;
+    yield effects.put(updateFirstCommodAction(commodData));
+    // const xhr = new XMLHttpRequest()
+    // xhr.timeout = 3000
+    // xhr.responseType = "json"
+    // xhr.open("GET",action.payload,true)
+    // xhr.onload = function () {
+    //   if (xhr.status === 200 || xhr.status === 304){
+    //     console.log('response.data')
+    //     console.log(xhr.response)
+    //     return xhr.response.data
+    //   }
+    // }
+    // console.log('test')
+    // xhr.ontimeout = function () {
+    //   console.log('请求时间超时')
+    // }
+    // xhr.send(null)
+    // xhr.onloadend = function* () {
+    //   const commodProps: Array<commodProps> = xhr.response.data
+    //   yield effects.put(updateFirstCommodAction(commodProps))
+    // }
 }
 export function updateFirstCommodAction(payload) {
     return createAction(`${PREFIX}/updateFirstCommod`)(payload);

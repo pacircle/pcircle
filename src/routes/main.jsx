@@ -5,7 +5,7 @@ import { queryShopInfoAction } from "../models/main/shopinfo";
 import { queryFirstCommodAction } from "../models/main/firstcommod";
 import { PREFIX as MainNamespace, } from '../models/main/index';
 import { style } from "typestyle";
-import Header from "../components/main/header";
+import Header from "../components/header";
 class Main extends React.Component {
     componentDidMount() {
         this.props.dispatch(queryShopInfoAction('/api/v1/commodity/index.json'));
@@ -18,11 +18,26 @@ class Main extends React.Component {
         else {
             console.log('列表为空');
         }
+        const containStyle = style({
+            width: '100%',
+            overflowX: 'auto',
+            textAlign: 'center'
+        });
         const commodStyle = style({
-            margin: 'auto'
+            // margin: 'auto'
+            width: '200px',
+            height: '300px',
+            whiteSpace: "nowrap",
+            float: 'left'
         });
         if (this.props.nowList === 0) {
-            return (<Commodity dispatch={this.props.dispatch} className={commodStyle} commodProps={this.props.commodList} image={require("../assets/weini.jpg")} name={"test"} price={1.0} description={"cartoon picture"} shop={"Disney"} location={"BeiJing"} people={33}/>);
+            return (<div className={containStyle}>
+          {this.props.commodList.map((items) => {
+                return (<div className={commodStyle} key={items.id}>
+                <Commodity key={items.id} commodProps={items} image={require("../assets/weini.jpg")}/>
+              </div>);
+            })}
+        </div>);
         }
         else if (this.props.nowList === 1) {
             return (<div>{this.props.list[this.props.nowList].name}</div>);

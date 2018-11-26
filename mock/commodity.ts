@@ -35,7 +35,8 @@ export default {
           description : 'cartoon pictures',
           location: '北京',
           people: 33,
-          image: "../assets/weini.jpg"
+          image: "../assets/weini.jpg",
+          shop: 'Disneys',
         },
         {
           id: '1',
@@ -45,7 +46,8 @@ export default {
           description : 'cartoon picture1',
           location: '北京',
           people: 43,
-          image: "../assets/weini.jpg"
+          image: "../assets/weini.jpg",
+          shop: 'Disneys',
         },
         {
           id: '2',
@@ -55,7 +57,8 @@ export default {
           description : 'cartoon picture',
           location: '北京',
           people: 53,
-          image: "../assets/weini.jpg"
+          image: "../assets/weini.jpg",
+          shop: 'Disneys',
         },
         {
           id: '3',
@@ -65,7 +68,8 @@ export default {
           description : 'cartoon picture3',
           location: '北京',
           people: 63,
-          image: "../assets/weini.jpg"
+          image: "../assets/weini.jpg",
+          shop: 'Disneys',
         }
       ]
     }
