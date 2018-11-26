@@ -81,7 +81,7 @@ class CommodDetail extends Component {
             Test
           </div>
         </div>
-        <div id={"all"} style={{marginTop: '200px' }}>Test222</div>
+        <div id={"all"} style={{ marginTop: '200px' }}>Test222</div>
       </div>
     )
   }
