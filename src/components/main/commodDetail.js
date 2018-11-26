@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { shopProps } from "../../models/main";
-import "./commod.css"
+import styles from "./commod.css"
 
 class CommodDetail extends Component {
   constructor(props) {
@@ -18,12 +18,6 @@ class CommodDetail extends Component {
       // display: 'flex',
       textAlign: 'center'
     }
-    const imgStyle = {
-      width: '80px',
-      height: '80px',
-      margin: '10px',
-      border: '2px solid black'
-    }
     return (
       <div style={urlStyle}>
         {imgUrl.map((item) => {
@@ -31,8 +25,7 @@ class CommodDetail extends Component {
             <img
               src={item}
               alt={'item'}
-              style={imgStyle}
-              // onMouseEnter={}
+              className={styles.img}
             />
           )
         })}
@@ -81,7 +74,6 @@ class CommodDetail extends Component {
             Test
           </div>
         </div>
-        <div id={"all"} style={{ marginTop: '200px' }}>Test222</div>
       </div>
     )
   }

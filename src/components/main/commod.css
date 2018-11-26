@@ -1,14 +1,11 @@
-#all {
-  width: 200px;
-  height: 200px;
-  border: solid 1px #e1e2e3;
-  margin: auto;
-  transition: .1s;
-  background: aquamarine;
+.img {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
 }
-#all:hover {
-  box-shadow: 0 0 10px #0ff;
-  border-color: #0ff;
-  width: 500px;
-  height: 500px;
+.img:hover {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border: 2px solid black
 }
