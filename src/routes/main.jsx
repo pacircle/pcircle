@@ -52,9 +52,23 @@ class Main extends React.Component {
         }
     }
     renderDetailPage() {
-        return (<div>
-        <CommodDetail />
-      </div>);
+        if (this.props.nowList === 0) {
+            return (<div>
+          <CommodDetail shopProps={this.props.commodList[this.props.nowList]}/>
+        </div>);
+        }
+        else if (this.props.nowList === 1) {
+            this.props.dispatch(changeDetailAction(false));
+            return (<div>{this.props.list[this.props.nowList].name}</div>);
+        }
+        else if (this.props.nowList === 2) {
+            this.props.dispatch(changeDetailAction(false));
+            return (<div>{this.props.list[this.props.nowList].name}</div>);
+        }
+        else if (this.props.nowList === 3) {
+            this.props.dispatch(changeDetailAction(false));
+            return (<div>{this.props.list[this.props.nowList].name}</div>);
+        }
     }
     render() {
         const mainStyle = style({

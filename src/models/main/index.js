@@ -32,7 +32,7 @@ export const initState = {
     nowList: 0,
     shop: null,
     commodList: [],
-    detail: true
+    detail: false
 };
 export default {
     namespace: PREFIX,

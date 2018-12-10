@@ -9,3 +9,36 @@
   margin: 10px;
   border: 2px solid black
 }
+.control {
+  color: #c57142;
+  font-size: 14px;
+  margin-left: 60%;
+}
+.priceStyle {
+  background: #eae9e9;
+  display: inline-block;
+  width: 100%;
+  background-image:repeating-linear-gradient(45deg,hsla(0,0%,100%,.2),hsla(0,0%,100%,.2) 50px,transparent 0,transparent 100px),
+  repeating-linear-gradient(-45deg,hsla(0,0%,100%,.2),hsla(0,0%,100%,.2)50px,transparent 0,transparent 100px);
+}
+
+.detail {
+  display: inline-block;
+  width: 100%;
+}
+.detailItem {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.detailTag {
+  width: 14%;
+  margin-left: 10px;
+  color: #b1b1ae;
+  font-size: 12px
+}
+
+.detailContent {
+  margin-left: 20px;
+  font-size: 12px
+}

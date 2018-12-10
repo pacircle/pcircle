@@ -79,7 +79,7 @@ export const initState: MainState = {
   nowList: 0,
   shop: null,
   commodList: [],
-  detail: true
+  detail: false
 }
 
 export default {
