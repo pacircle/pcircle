@@ -21,6 +21,16 @@ function RouterConfig({ history, app }) {
         });
       },
     },
+    {
+      path: '/commod',
+      name: 'Commodity',
+      getComponent(nextState, cb) {
+        require.ensure([], (require) => {
+          registerModel(app, require('./models/commodity/index').default);
+          cb(null, require('./routes/commodity'))
+        })
+      }
+    }
   ];
 
   return <Router history={history} routes={routes} />;
