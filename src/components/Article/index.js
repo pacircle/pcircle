@@ -1,5 +1,6 @@
 import { List, Avatar, Icon, Button, Popconfirm, message } from 'antd';
 import { deleteArticleAction } from "../../models/main/deletearticle";
+import Comments from './dearticle'
 const IconText = ({ type, text }) => (
   <span>
     <Icon type={type} style={{ marginRight: 8 }}></Icon>
@@ -50,9 +51,9 @@ const Articles = ({ listDatas, dispatch }) => {
         renderItem={item => (
           <List.Item
             key={item.id}
-            actions={[<IconText type="like-o" text={item.agree || "0"} />, <IconText type="message" text={"0" || item.commentList.length} />,
+            actions={[<IconText type="like-o" text={item.agree || "0"} />, <IconText type="message" text={item.commentList.length || "0"} />,
               <Popconfirm title="是否确定删除用户" onConfirm={confirm.bind(this, item.id)} onCancel={cancel} okText="Yes" cancelText="No">
-                <Button type="primary" >删除用户</Button>
+                <Button type="primary" >删除文章</Button>
               </Popconfirm>
             ]}
             extra={item.time}
@@ -63,6 +64,7 @@ const Articles = ({ listDatas, dispatch }) => {
               description={item.sub}
             />
             {item.content}
+            <Comments commentList={item.commentList} />
           </List.Item>
         )}
       >
