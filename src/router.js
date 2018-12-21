@@ -13,21 +13,21 @@ function RouterConfig({ history, app }) {
   const routes = [
     {
       path: '/',
-      name: 'Main',
+      name: 'login',
       getComponent(nextState, cb) {
         require.ensure([], (require) => {
-          registerModel(app, require('./models/main/index').default);
-          cb(null, require('./routes/main'));
+          registerModel(app, require('./models/login/index').default);
+          cb(null, require('./routes/login/login'));
         });
       },
     },
     {
-      path: '/commod',
-      name: 'Commodity',
+      path: '/main',
+      name: 'main',
       getComponent(nextState, cb) {
         require.ensure([], (require) => {
-          registerModel(app, require('./models/commodity/index').default);
-          cb(null, require('./routes/commodity'))
+          registerModel(app, require('./models/main/index').default);
+          cb(null, require('./routes/main/main'))
         })
       }
     }
