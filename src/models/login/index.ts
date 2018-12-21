@@ -1,13 +1,15 @@
 
 
-export interface IndexState {
-
+export interface LoginState {
+  name: String,
+  pass: String
 }
 
-export const PREFIX = 'index'
+export const PREFIX = 'login'
 
-export const initState: IndexState = {
-
+export const initState: LoginState = {
+  name: 'UserName',
+  pass: 'Password'
 }
 
 export default {

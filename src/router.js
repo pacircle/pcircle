@@ -17,9 +17,19 @@ function RouterConfig({ history, app }) {
       getComponent(nextState, cb) {
         require.ensure([], (require) => {
           registerModel(app, require('./models/login/index').default);
-          cb(null, require('./routes/login'));
+          cb(null, require('./routes/login/login'));
         });
       },
+    },
+    {
+      path: '/main',
+      name: 'main',
+      getComponent(nextState, cb) {
+        require.ensure([], (require) => {
+          registerModel(app, require('./models/main/index').default);
+          cb(null, require('./routes/main/main'))
+        })
+      }
     },
     {
       path: '/commod',
