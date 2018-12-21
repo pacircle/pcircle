@@ -1,21 +1,15 @@
 import { List, Avatar, Icon, Button, Popconfirm, message } from 'antd';
+import { deleteArticleAction } from "../../models/main/deletearticle";
 const IconText = ({ type, text }) => (
   <span>
     <Icon type={type} style={{ marginRight: 8 }}></Icon>
     {text}
   </span>
 )
-const confirm = (e) => {
-  console.log(e)
-  message.success('删除成功')
-}
-const cancel = (e) => {
-  console.log(e)
-  message.error('取消删除')
-}
 const listData = [];
 for (let i = 0; i < 23; i++) {
   listData.push({
+    id: i,
     href: 'http://ant.design',
     title: `ant design part ${i}`,
     avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
@@ -23,13 +17,29 @@ for (let i = 0; i < 23; i++) {
     content: 'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
   });
 }
-const Articles = () => {
+
+
+const Articles = ({ listDatas, dispatch }) => {
+  console.log(listDatas)
+  if (!listDatas) {
+    return null
+  }
+  const confirm = (id) => {
+    console.log(id)
+    dispatch(deleteArticleAction(id))
+    message.success('删除成功')
+  }
+  const cancel = (e) => {
+    console.log(e)
+    message.error('取消删除')
+  }
+
   return (
     <div style={{ marginLeft: '10px' }}>
       <List
         itemLayout={"vertical"}
         size={"large"}
-        dataSource={listData}
+        dataSource={listDatas}
         pagination={{
           onChange: (page) => {
             console.log(page)
@@ -39,19 +49,18 @@ const Articles = () => {
         // footer={<div><b>ant design</b> footer part</div>}
         renderItem={item => (
           <List.Item
-            key={item.title}
-            actions={[<IconText type="star-o" text="156" />, <IconText type="like-o" text="156" />,
-              <IconText type="message" text="2" />,
-              <Popconfirm title="是否确定删除用户" onConfirm={confirm} onCancel={cancel} okText="Yes" cancelText="No">
-                <Button type="primary">删除用户</Button>
+            key={item.id}
+            actions={[<IconText type="like-o" text={item.agree || "0"} />, <IconText type="message" text={"0" || item.commentList.length} />,
+              <Popconfirm title="是否确定删除用户" onConfirm={confirm.bind(this, item.id)} onCancel={cancel} okText="Yes" cancelText="No">
+                <Button type="primary" >删除用户</Button>
               </Popconfirm>
             ]}
-            // extra={<Icon type="close" />}
+            extra={item.time}
           >
             <List.Item.Meta
-              avatar={<Avatar src={item.avatar} />}
+              avatar={<Avatar src={item.src} />}
               title={<a href={item.href}>{item.title}</a>}
-              description={item.description}
+              description={item.sub}
             />
             {item.content}
           </List.Item>

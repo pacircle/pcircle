@@ -48,7 +48,8 @@
     "react/jsx-indent-props": [0],
     "class-methods-use-this": [0],
     "react/jsx-first-prop-new-line": [0],
-    "no-plusplus": [0]
+    "no-plusplus": [0],
+    "arrow-parens": [0]
   },
   "parserOptions": {
     "ecmaFeatures": {

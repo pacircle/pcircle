@@ -30,17 +30,7 @@ function RouterConfig({ history, app }) {
           cb(null, require('./routes/main/main'))
         })
       }
-    },
-    {
-      path: '/commod',
-      name: 'Commodity',
-      getComponent(nextState, cb) {
-        require.ensure([], (require) => {
-          registerModel(app, require('./models/commodity/index').default);
-          cb(null, require('./routes/commodity'))
-        })
-      }
-    },
+    }
   ];
 
   return <Router history={history} routes={routes} />;

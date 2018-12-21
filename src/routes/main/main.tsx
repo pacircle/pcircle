@@ -17,6 +17,7 @@ import {
 import {style} from "typestyle"
 
 import {Menu,Icon,Layout} from 'antd';
+import {queryActicleInfoAction} from "../../models/main/queryArticles";
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 const MenuItem = Menu.Item;
@@ -32,6 +33,7 @@ class Main extends React.Component<MainProps & MainDispatcherProps, {}> {
 
 
   componentDidMount(){
+    this.props.dispatch(queryActicleInfoAction("http://result.eolinker.com/2iwkBiged241c5a42bdfb8b083224dbf190f8b770cac539?uri=/super/index"))
   }
 
   render() {
@@ -55,11 +57,10 @@ class Main extends React.Component<MainProps & MainDispatcherProps, {}> {
               <Menus></Menus>
             </Sider>
             <Content className={contentStyle}>
-              <Articles/>
+              <Articles listDatas={this.props.articles} dispatch={this.props.dispatch}/>
             </Content>
           </Layout>
         </Layout>
-
       </div>
     )
   }
