@@ -3,16 +3,20 @@ import { connect } from 'dva'
 import {Form,Icon, Input, Button, Checkbox} from 'antd';
 const FormItem = Form.Item;
 import {style} from "typestyle";
+import {hashHistory} from "react-router";
 
-class Login extends React.Component<any, any> {
+class Login extends React.Component<{}, {}> {
 
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
-        if (values.userName === "sjtu_user" && values.password === "sjtu1225"){
+        if (values.userName === "1" && values.password === "2"){
           console.log('成功')
+          hashHistory.push({
+            pathname: '/user'
+          })
         }
       }
     });
