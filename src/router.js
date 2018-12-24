@@ -30,6 +30,26 @@ function RouterConfig({ history, app }) {
           cb(null, require('./routes/main/main'))
         })
       }
+    },
+    {
+      path: '/user',
+      name: 'User',
+      getComponent(nextState, cb) {
+        require.ensure([], (require) => {
+          registerModel(app, require('./models/user/index').default);
+          cb(null, require('./routes/user/index'))
+        })
+      }
+    },
+    {
+      path: '/usdelete',
+      name: 'Usdelete',
+      getComponent(nextState, cb) {
+        require.ensure([], (require) => {
+          registerModel(app, require('./models/user/index').default);
+          cb(null, require('./routes/usdelete/index'))
+        })
+      }
     }
   ];
 

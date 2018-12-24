@@ -27,7 +27,6 @@ export function updateArticleInfoAction(payload: Array<articleProps>) {
 }
 
 export function updateArticleInfo(state: MainState, action: Action<Array<articleProps>>) {
-  console.log('chenggong')
   let newState = {...state}
   const articles = action.payload
   newState.articles = articles

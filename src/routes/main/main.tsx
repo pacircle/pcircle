@@ -1,14 +1,9 @@
-import * as React from 'react'
-import {connect} from 'dva'
-import * as Redux from 'redux'
-import Commodity from "../../components/main/commodity"
-import { changeTestAction } from '../../models/main/changeTest'
-import {queryShopInfoAction} from "../../models/main/shopinfo";
-import {queryFirstCommodAction} from "../../models/main/firstcommod";
-import {changeDetailAction} from "../../models/main/changeDetail";
-import CommodDetail from "../../components/main/commodDetail"
+import * as React from 'react';
+import {connect} from 'dva';
+import * as Redux from 'redux';
 import Menus from '../../components/Layout/menus'
 import Articles from '../../components/Article/index'
+import Mainview from '../../components/Layout/mainview';
 
 import {
   MainState as MainModelState, PREFIX as MainNamespace,
@@ -37,30 +32,11 @@ class Main extends React.Component<MainProps & MainDispatcherProps, {}> {
   }
 
   render() {
-    const headerStyle = style({
-      color: 'white',
-      fontSize: '25px'
-    })
-    const contentStyle = style({
-      background: 'white',
-      height: '100vh',
-    })
-
     return (
       <div>
-        <Layout>
-          <Header className={headerStyle}>
-            <span><Icon type="pie-chart"/></span>
-            <span>互联圈后台管理系统</span></Header>
-          <Layout>
-            <Sider style={{background: 'white'}}>
-              <Menus></Menus>
-            </Sider>
-            <Content className={contentStyle}>
-              <Articles listDatas={this.props.articles} dispatch={this.props.dispatch}/>
-            </Content>
-          </Layout>
-        </Layout>
+        <Mainview>
+          <Articles listDatas={this.props.articles} dispatch={this.props.dispatch}/>
+        </Mainview>
       </div>
     )
   }
