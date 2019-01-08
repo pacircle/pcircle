@@ -1,5 +1,6 @@
 import {queryArticleInfo, updateArticleInfo} from "./queryArticles";
 import {deleteArticle} from "./deletearticle";
+import {changeMenuKeys} from "./changeMenuKeys";
 
 export interface answerProps {
   content: String,
@@ -34,12 +35,16 @@ export interface articleProps {
 }
 export interface MainState {
   articles: Array<articleProps>
+  SelectedKeys: Array<String>
+  OpenKeys: Array<String>
 }
 
 export const PREFIX = 'main'
 
 export const initState: MainState = {
-  articles: null
+  articles: null,
+  SelectedKeys: ['1'],
+  OpenKeys: ['sub1']
 }
 
 export default {
@@ -50,6 +55,7 @@ export default {
   },
   reducers: {
     updateArticleInfo: updateArticleInfo,
-    deleteArticle: deleteArticle
+    deleteArticle: deleteArticle,
+    changeMenuKeys: changeMenuKeys
   }
 }

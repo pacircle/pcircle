@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { connect } from 'dva'
-import {Form,Icon, Input, Button, Checkbox} from 'antd';
+import {Form,Icon, Input, Button, Checkbox,message} from 'antd';
 const FormItem = Form.Item;
 import {style} from "typestyle";
 import {hashHistory} from "react-router";
@@ -11,12 +11,14 @@ class Login extends React.Component<{}, {}> {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
-        if (values.userName === "1" && values.password === "2"){
+        // console.log('Received values of form: ', values);
+        if (values.userName === "admin" && values.password === "admin"){
           console.log('成功')
           hashHistory.push({
-            pathname: '/user'
+            pathname: '/main'
           })
+        } else {
+          message.error('用户名或者密码错误');
         }
       }
     });

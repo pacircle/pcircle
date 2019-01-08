@@ -19,7 +19,7 @@ class User extends React.Component<UserProps & UserDispatchProps,{}> {
   render(){
     return (
       <div>
-        <Mainview>
+        <Mainview dispatch={this.props.dispatch}>
           {this.props.userInfos? <UserTable userInfos={this.props.userInfos}/>: <div>暂无用户信息</div>}
         </Mainview>
       </div>

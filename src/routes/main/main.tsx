@@ -34,7 +34,7 @@ class Main extends React.Component<MainProps & MainDispatcherProps, {}> {
   render() {
     return (
       <div>
-        <Mainview>
+        <Mainview dispatch={this.props.dispatch}>
           <Articles listDatas={this.props.articles} dispatch={this.props.dispatch}/>
         </Mainview>
       </div>

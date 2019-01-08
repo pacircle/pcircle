@@ -1,4 +1,4 @@
-import { Comment, Avatar, Collapse } from 'antd';
+import { Comment, Avatar, Collapse, Button } from 'antd';
 const Panel = Collapse.Panel;
 
 const Answer = ({ children, comments }) => (
@@ -16,24 +16,24 @@ const Answer = ({ children, comments }) => (
   </Comment>
 )
 
-const Answers = ({ answer }) => {
-  return (
-    <div>
-      {answer.map((item) => {
-        return <Comment author={<a>{item.nickName}</a>}
-                        avatar={(
-                          <Avatar
-                            src={item.src}
-                            alt={"User"}
-                          />
-                        )}
-                        content={<span>{item.content}</span>}
-                        key={item.id}
-        />
-      })}
-    </div>
-  )
-}
+// const Answers = ({ answer }) => {
+//   return (
+//     <div>
+//       {answer.map((item) => {
+//         return <Comment author={<a>{item.nickName}</a>}
+//                         avatar={(
+//                           <Avatar
+//                             src={item.src}
+//                             alt={"User"}
+//                           />
+//                         )}
+//                         content={<span>{item.content}</span>}
+//                         key={item.id}
+//         />
+//       })}
+//     </div>
+//   )
+// }
 
 const Comments = ({ commentList }) => {
   return (
@@ -41,10 +41,11 @@ const Comments = ({ commentList }) => {
       <Collapse bordered={false} defaultActiveKey={['1']}>
         <Panel header={"展开评论内容"} key={"1"}>
           {commentList.map((items) => {
-            console.log(items)
+            // console.log(items)
               return (
                 <Answer comments={items} key={items.id}>
-                  {items.answers ? <Answers answer={items.answers} /> : null}
+                  {/*{items.answers ? <Answers answer={items.answers} /> : null}*/}
+                  <Button type="primary">评论删除</Button>
                 </Answer>
               )
           })}

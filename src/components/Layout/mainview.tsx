@@ -2,9 +2,13 @@ import * as React from 'react';
 import { Layout, Icon } from "antd/lib/index";
 import { style } from "typestyle/lib/index";
 import Menus from './menus';
-
+import * as Redux from 'redux';
+interface MainDispatcherProps {
+  dispatch: Redux.Dispatch<any>
+}
 const {Header,Sider,Content} = Layout;
-class Mainview extends React.Component<{},{}> {
+
+class Mainview extends React.Component<MainDispatcherProps,{}> {
   render() {
     const headerStyle = style({
       color: 'white',
@@ -23,7 +27,7 @@ class Mainview extends React.Component<{},{}> {
           </Header>
           <Layout>
             <Sider style={{ background: 'white' }}>
-              <Menus></Menus>
+              <Menus dispatch={this.props.dispatch}></Menus>
             </Sider>
             <Content className={contentStyle}>
               {/*<Articles listDatas={this.props.articles} dispatch={this.props.dispatch}/>*/}
