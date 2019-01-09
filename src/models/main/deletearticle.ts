@@ -5,19 +5,18 @@ import {message} from "antd";
 import * as DVA from 'dva'
 const requests:any = request
 
-export function updateArticlesInfoAction(id:string) {
-  return createAction<string>(`${PREFIX}/updateArticlesInfo`)(id)
+export function deleteArticlesInfoAction(id:string) {
+  return createAction<string>(`${PREFIX}/deleteArticlesInfo`)(id)
 }
 
-export function* updateArticlesInfo(action: Action<string>, effects: DVA.EffectsCommandMap) {
+export function* deleteArticlesInfo(action: Action<string>, effects: DVA.EffectsCommandMap) {
+
   let response:RequestResponse = yield (() => {
-    let params = `?id=${action.payload}`;
-    return requests({
-      url: `http://result.eolinker.com/2iwkBiged241c5a42bdfb8b083224dbf190f8b770cac539?uri=/super/article${params}`
-    })
-  })
+    return requests(`http://127.0.0.1:7979/super/article/delete?name=admin&&password=admin&&articleId=${action.payload}`)
+  })()
 
   let BackendResponse: BackendResponse = response.data
+  console.log('response',response)
   if(!response || response.err || !BackendResponse || 200 !== BackendResponse.state){
     message.error("删除文章失败，检查网络")
     return null
@@ -33,6 +32,7 @@ export function deleteArticle(state: MainState, action: Action<string>) {
   let newState = {...state}
   let id = action.payload
   let articles = newState.articles
-  newState.articles = articles.filter(item => item.id !== id)
+  newState.articles = articles.filter(item => item._id.$oid !== id)
+  message.success('删除成功')
   return newState
 }

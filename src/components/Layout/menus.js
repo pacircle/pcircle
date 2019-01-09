@@ -51,7 +51,7 @@ class Menuss extends React.Component {
     this.handleClick = this.handleClick.bind(this)
   }
   handleClick = (e) => {
-    console.log('click', e.keyPath)
+    // console.log('click', e.keyPath)
     this.props.dispatch(changeMenuKeysAction(e.keyPath))
   }
   render() {
@@ -73,7 +73,7 @@ class Menuss extends React.Component {
           </Menu.SubMenu>
           <Menu.SubMenu key={"sub2"} title={<span><Icon type="user" /><span>用户管理</span></span>}>
             <Menu.Item key="2"><Link to={"/user"}>所有用户信息查看</Link></Menu.Item>
-            <Menu.Item key="3"><Link to={"/usdelete"}>用户详细信息</Link></Menu.Item>
+            <Menu.Item key="3"><Link to={{ pathname: "/usdetail" }}>用户详细信息</Link></Menu.Item>
           </Menu.SubMenu>
           {/*<Menu.SubMenu key={"sub3"} title={<span><Icon type="solution" /><span>评论管理</span></span>}>*/}
           {/*<Menu.Item key={"4"}>查看所有评论</Menu.Item>*/}

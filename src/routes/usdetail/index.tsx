@@ -7,6 +7,9 @@ interface UsdeleteDispatcherProps {
 }
 
 class Usdelete extends React.Component<UsdeleteDispatcherProps,{}> {
+  componentDidMount(){
+    console.log(this.props.location)
+  }
   render() {
     return (
       <Mainview dispatch={this.props.dispatch}>

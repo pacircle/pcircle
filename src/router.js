@@ -42,12 +42,12 @@ function RouterConfig({ history, app }) {
       }
     },
     {
-      path: '/usdelete',
-      name: 'Usdelete',
+      path: '/usdetail',
+      name: 'Usdetail',
       getComponent(nextState, cb) {
         require.ensure([], (require) => {
           registerModel(app, require('./models/user/index').default);
-          cb(null, require('./routes/usdelete/index'))
+          cb(null, require('./routes/usdetail/index'))
         })
       }
     }

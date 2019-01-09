@@ -1,5 +1,5 @@
 import {queryArticleInfo, updateArticleInfo} from "./queryArticles";
-import {deleteArticle} from "./deletearticle";
+import {deleteArticle,deleteArticlesInfo} from "./deletearticle";
 import {changeMenuKeys} from "./changeMenuKeys";
 
 export interface answerProps {
@@ -51,7 +51,8 @@ export default {
   namespace: PREFIX,
   state: initState,
   effects: {
-    queryArticleInfo: queryArticleInfo
+    queryArticleInfo: queryArticleInfo,
+    deleteArticlesInfo: deleteArticlesInfo
   },
   reducers: {
     updateArticleInfo: updateArticleInfo,

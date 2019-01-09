@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Table, Input, Button, Icon, Popconfirm } from 'antd';
+import { Table, Input, Button, Icon, Popconfirm, Avatar } from 'antd';
 import Highlighter from 'react-highlight-words'
 // const FormItem = Form.Item
 // const EditableContext = React.createContext()
@@ -13,6 +13,7 @@ import Highlighter from 'react-highlight-words'
 class UserTable extends React.Component {
   constructor(props) {
     super(props)
+    // console.log(this.props.userInfos)
     this.state = {
       searchText: '',
       data: this.props.userInfos
@@ -94,18 +95,24 @@ class UserTable extends React.Component {
 
   handleClick = (key) => {
     console.log(key)
+
   }
   render() {
     const colums = [{
+      title: '用户头像',
+      dataIndex: 'avatarUrl',
+      key: 'avatarUrl',
+      render: avatarUrl => <Avatar src={avatarUrl} />
+    }, {
       title: '用户昵称',
       dataIndex: 'nickName',
       key: 'nickName',
       ...this.getColumnSearchProps('nickName')
     }, {
       title: '用户openid',
-      dataIndex: 'id',
-      key: 'id',
-      ...this.getColumnSearchProps('id')
+      dataIndex: '_id',
+      key: '_id',
+      ...this.getColumnSearchProps('_id')
     }, {
       title: "用户性别",
       dataIndex: "gender",
@@ -122,7 +129,7 @@ class UserTable extends React.Component {
                 <a href="javascript:;">删除用户</a>
               </Popconfirm>
             ) : null}
-            <Button style={{ marginLeft: '4px' }} type="primary" size="small" onClick={() => this.handleClick(record.key)}>查看用户</Button>
+            <Button style={{ marginLeft: '4px' }} type="primary" size="small" onClick={() => this.handleClick(record._id)}>查看用户</Button>
         </div>
 
       )

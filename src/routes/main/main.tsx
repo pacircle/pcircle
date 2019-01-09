@@ -28,14 +28,20 @@ class Main extends React.Component<MainProps & MainDispatcherProps, {}> {
 
 
   componentDidMount(){
-    this.props.dispatch(queryActicleInfoAction("http://result.eolinker.com/2iwkBiged241c5a42bdfb8b083224dbf190f8b770cac539?uri=/super/index"))
+    this.props.dispatch(queryActicleInfoAction("http://127.0.0.1:7979/super/index"))
   }
 
   render() {
+    const articleStyle = style({
+      fontSize: '25px'
+    })
     return (
       <div>
         <Mainview dispatch={this.props.dispatch}>
-          <Articles listDatas={this.props.articles} dispatch={this.props.dispatch}/>
+          {this.props.articles ? <div>
+            <div className={articleStyle}>当前文章总数：{this.props.articles.length}</div>
+            <Articles listDatas={this.props.articles} dispatch={this.props.dispatch}/>
+          </div> : <div>暂无文章</div>}
         </Mainview>
       </div>
     )

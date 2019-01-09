@@ -38,7 +38,7 @@ const Answer = ({ children, comments }) => (
 const Comments = ({ commentList }) => {
   return (
     <div>
-      <Collapse bordered={false} defaultActiveKey={['1']}>
+      <Collapse bordered={false}>
         <Panel header={"展开评论内容"} key={"1"}>
           {commentList.map((items) => {
             // console.log(items)

@@ -3,18 +3,30 @@ import {articleProps, MainState, PREFIX} from "./index";
 import * as DVA from 'dva';
 import {BackendResponse, request, RequestResponse} from "../../utils/request";
 import {message} from "antd";
+const requests:any = request
 
 export function queryActicleInfoAction(url: string) {
   return createAction<string>(`${PREFIX}/queryArticleInfo`)(url)
 }
 
 export function* queryArticleInfo(action: Action<string>,effects: DVA.EffectsCommandMap) {
+  // let params = "?name=admin&&password=admin"
+  // console.log(action.payload + `${params}`)
+  // const response:RequestResponse = yield (() => {
+  //   return requests({
+  //     url: "http://127.0.0.1:7979/super/index?name=admin&&password=admin"
+  //   })
+  // })()
+  let params = "?name=admin&&password=admin";
+  console.log(action.payload + `${params}`)
   const response:RequestResponse = yield (() => {
-    return request(action.payload)
+    return requests(action.payload + `${params}`)
   })()
 
   const backendData:BackendResponse = response.data
-  if (!response || response.err || !backendData || 200 == backendData.state){
+  console.log('response',response)
+  console.log('state',backendData)
+  if (!response || response.err || !backendData || 200 !== backendData.state){
     message.error('出错啦')
     return null
   }

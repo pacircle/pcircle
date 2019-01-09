@@ -1,5 +1,5 @@
 import { List, Avatar, Icon, Button, Popconfirm, message } from 'antd';
-import { deleteArticleAction } from "../../models/main/deletearticle";
+import { deleteArticlesInfoAction } from "../../models/main/deletearticle";
 import Comments from './dearticle'
 const IconText = ({ type, text }) => (
   <span>
@@ -21,18 +21,26 @@ for (let i = 0; i < 23; i++) {
 
 
 const Articles = ({ listDatas, dispatch }) => {
-  console.log(listDatas)
+  // console.log(listDatas)
   if (!listDatas) {
     return null
   }
   const confirm = (id) => {
-    console.log(id)
-    dispatch(deleteArticleAction(id))
-    message.success('删除成功')
+    console.log('id', id)
+    dispatch(deleteArticlesInfoAction(id))
   }
   const cancel = (e) => {
     console.log(e)
     message.error('取消删除')
+  }
+
+  const confirmUser = (id) => {
+    console.log('id', id)
+    dispatch(deleteArticlesInfoAction(id))
+  }
+  const cancelUser = (e) => {
+    console.log(e)
+    message.error('取消查看')
   }
 
   return (
@@ -50,16 +58,19 @@ const Articles = ({ listDatas, dispatch }) => {
         // footer={<div><b>ant design</b> footer part</div>}
         renderItem={item => (
           <List.Item
-            key={item.id}
+            key={item._id}
             actions={[<IconText type="like-o" text={item.agree || "0"} />, <IconText type="message" text={item.commentList.length || "0"} />,
-              <Popconfirm title="是否确定删除用户" onConfirm={confirm.bind(this, item.id)} onCancel={cancel} okText="Yes" cancelText="No">
+              <Popconfirm title="是否确定删除用户" onConfirm={confirm.bind(this, item._id.$oid)} onCancel={cancel} okText="Yes" cancelText="No">
                 <Button type="primary" >删除文章</Button>
+              </Popconfirm>,
+              <Popconfirm title="是否确定查看用户" onConfirm={confirmUser.bind(this, item._id.$oid)} onCancel={cancelUser} okText="Yes" cancelText="No">
+              <Button type="primary" >查看用户</Button>
               </Popconfirm>
             ]}
             extra={item.time}
           >
             <List.Item.Meta
-              avatar={<Avatar src={item.src} />}
+              avatar={<Avatar src={item.avatarUrl} />}
               title={<a href={item.href}>{item.title}</a>}
               description={item.sub}
             />
