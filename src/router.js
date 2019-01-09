@@ -46,7 +46,7 @@ function RouterConfig({ history, app }) {
       name: 'Usdetail',
       getComponent(nextState, cb) {
         require.ensure([], (require) => {
-          registerModel(app, require('./models/user/index').default);
+          registerModel(app, require('./models/usdetail/index').default);
           cb(null, require('./routes/usdetail/index'))
         })
       }

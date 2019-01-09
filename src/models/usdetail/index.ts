@@ -1,7 +1,7 @@
+import {queryUserDetail,updateUserDetail} from "./queryUserDetail";
 
-
-export interface UserState {
-  userInfos: userProps
+export interface UsdetailState {
+  userInfo: userProps
 }
 
 export interface userProps {
@@ -55,18 +55,18 @@ export interface answerProps {
   content: String
 }
 
-export const initState:UserState = {
-  userInfos: null
+export const initState:UsdetailState = {
+  userInfo: null
 }
-export const PREFIX = 'User'
+export const PREFIX = 'Usdetail'
 
 export default {
   namespace: PREFIX,
   state: initState,
   effects: {
-
+    queryUserDetail:queryUserDetail
   },
   reducers: {
-
+    updateUserDetail: updateUserDetail
   }
 }

@@ -35,7 +35,7 @@ export function* queryArticleInfo(action: Action<string>,effects: DVA.EffectsCom
 }
 
 export function updateArticleInfoAction(payload: Array<articleProps>) {
-  return createAction<Array<articleProps>>("updateArticleInfo")(payload)
+  return createAction<Array<articleProps>>(`${PREFIX}/updateArticleInfo`)(payload)
 }
 
 export function updateArticleInfo(state: MainState, action: Action<Array<articleProps>>) {
