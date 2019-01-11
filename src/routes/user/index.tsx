@@ -27,7 +27,7 @@ class User extends React.Component<UserProps & UserDispatchProps,{}> {
           {this.props.userInfos?
             <div>
               <div className={articleStyle}>当前用户总数：{this.props.userInfos.length}</div>
-              <UserTable userInfos={this.props.userInfos}/>
+              <UserTable userInfos={this.props.userInfos} dispatch={this.props.dispatch}/>
             </div>: <div>暂无用户信息</div>}
         </Mainview>
       </div>

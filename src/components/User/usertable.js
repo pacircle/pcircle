@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Table, Input, Button, Icon, Popconfirm, Avatar } from 'antd';
 import Highlighter from 'react-highlight-words'
+import { hashHistory } from "react-router";
+import { changeMenuKeysAction } from "../../models/main/changeMenuKeys";
 // const FormItem = Form.Item
 // const EditableContext = React.createContext()
 // const EditableRow = ({ form, index, ...props}) => (
@@ -95,6 +97,11 @@ class UserTable extends React.Component {
 
   handleClick = (key) => {
     console.log(key)
+    this.props.dispatch(changeMenuKeysAction(["3", "sub2"]))
+    hashHistory.push({
+      pathname: '/usdetail',
+      query: { userId: key }
+    })
 
   }
   render() {

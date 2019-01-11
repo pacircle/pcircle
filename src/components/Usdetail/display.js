@@ -27,31 +27,31 @@ class UserDisplay extends React.Component {
     return (
       <div>
         <div style={{ marginLeft: '10px' }}>
-          <List
-            itemLayout="vertical"
-            size="large"
-            // pagination={{
-            //   onChange: (page) => {
-            //     console.log(page);
-            //   },
-            //   pageSize: 3,
-            // }}
-            dataSource={[this.props.userInfo]}
-            // footer={<div><b>ant design</b> footer part</div>}
-            renderItem={item => (
-              <List.Item
-                key={item._id}
-                // actions={[<IconText type="star-o" text="156" />, <IconText type="like-o" text="156" />, <IconText type="message" text="2" />]}
-              >
-                <List.Item.Meta
-                  avatar={<Avatar src={item.avatarUrl} />}
-                  title={<a href={item.href}>{item.nickName}</a>}
-                  // description={item.description}
-                />
-                {/*{item.content}*/}
-              </List.Item>
-            )}
-          />
+          {/*<List*/}
+            {/*itemLayout="vertical"*/}
+            {/*size="large"*/}
+            {/*// pagination={{*/}
+            {/*//   onChange: (page) => {*/}
+            {/*//     console.log(page);*/}
+            {/*//   },*/}
+            {/*//   pageSize: 3,*/}
+            {/*// }}*/}
+            {/*dataSource={[this.props.userInfo]}*/}
+            {/*// footer={<div><b>ant design</b> footer part</div>}*/}
+            {/*renderItem={item => (*/}
+              {/*<List.Item*/}
+                {/*key={item._id}*/}
+                {/*// actions={[<IconText type="star-o" text="156" />, <IconText type="like-o" text="156" />, <IconText type="message" text="2" />]}*/}
+              {/*>*/}
+                {/*<List.Item.Meta*/}
+                  {/*avatar={<Avatar src={item.avatarUrl} />}*/}
+                  {/*title={<a href={item.href}>{item.nickName}</a>}*/}
+                  {/*// description={item.description}*/}
+                {/*/>*/}
+                {/*/!*{item.content}*!/*/}
+              {/*</List.Item>*/}
+            {/*)}*/}
+          {/*/>*/}
         </div>
       </div>
     )

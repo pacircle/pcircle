@@ -5,6 +5,8 @@ import * as Redux from 'redux';
 import {UsdetailState as UsdetailModelState,PREFIX as UsdetailNamespace} from "../../models/usdetail";
 import UserDisplay from '../../components/Usdetail/display'
 import {queryUserDetailAction} from "../../models/usdetail/queryUserDetail";
+import {changeMenuKeysAction} from "../../models/main/changeMenuKeys";
+
 type UsdetailProps = UsdetailModelState
 
 interface UsdetailDispatcherProps {
