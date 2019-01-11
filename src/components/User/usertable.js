@@ -89,10 +89,12 @@ class UserTable extends React.Component {
   }
 
   handleDelete = (key) => {
-    const dataSource = [...this.state.data];
-    this.setState({
-      data: dataSource.filter(item => item.key != key)
-    })
+    // 删除用户
+    // const dataSource = [...this.state.data];
+    // this.setState({
+    //   data: dataSource.filter(item => item.key != key)
+    // })
+    console.log(key)
   }
 
   handleClick = (key) => {
@@ -132,7 +134,7 @@ class UserTable extends React.Component {
         <div>
           {this.state.data.length >= 1
             ? (
-              <Popconfirm title={"确定删除用户吗？"} onConfirm={() => this.handleDelete(record.key)}>
+              <Popconfirm title={"确定删除用户吗？"} onConfirm={() => this.handleDelete(record._id)}>
                 <a href="javascript:;">删除用户</a>
               </Popconfirm>
             ) : null}

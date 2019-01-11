@@ -1,5 +1,8 @@
 import React from 'react';
 import { List, Avatar, Icon } from 'antd';
+import { style } from "typestyle/lib/index";
+
+import Articles from '../../components/Article/index'
 
 const IconText = ({ type, text }) => (
   <span>
@@ -24,9 +27,16 @@ class UserDisplay extends React.Component {
     console.log('userInfo', this.props.userInfo)
   }
   render() {
+    const articleStyle = style({
+      fontSize: '25px'
+    })
     return (
       <div>
         <div style={{ marginLeft: '10px' }}>
+          {this.props.articles ? <div>
+            <div className={articleStyle}>当前用户发表的文章总数：{this.props.articles.length}</div>
+            <Articles listDatas={this.props.articles} dispatch={this.props.dispatch} />
+          </div> : <div>暂无文章</div>}
           {/*<List*/}
             {/*itemLayout="vertical"*/}
             {/*size="large"*/}

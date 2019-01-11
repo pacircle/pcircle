@@ -1,6 +1,8 @@
 import { List, Avatar, Icon, Button, Popconfirm, message } from 'antd';
+import { hashHistory } from 'react-router'
 import { deleteArticlesInfoAction } from "../../models/main/deletearticle";
 import Comments from './dearticle'
+import { changeMenuKeysAction } from "../../models/main/changeMenuKeys";
 const IconText = ({ type, text }) => (
   <span>
     <Icon type={type} style={{ marginRight: 8 }}></Icon>
@@ -36,7 +38,12 @@ const Articles = ({ listDatas, dispatch }) => {
 
   const confirmUser = (id) => {
     console.log('id', id)
-    dispatch(deleteArticlesInfoAction(id))
+    // dispatch(deleteArticlesInfoAction(id))
+    dispatch(changeMenuKeysAction(["3", "sub2"]))
+    hashHistory.push({
+      pathname: '/usdetail',
+      query: { userId: id }
+    })
   }
   const cancelUser = (e) => {
     console.log(e)
@@ -63,7 +70,7 @@ const Articles = ({ listDatas, dispatch }) => {
               <Popconfirm title="是否确定删除用户" onConfirm={confirm.bind(this, item._id.$oid)} onCancel={cancel} okText="Yes" cancelText="No">
                 <Button type="primary" >删除文章</Button>
               </Popconfirm>,
-              <Popconfirm title="是否确定查看用户" onConfirm={confirmUser.bind(this, item._id.$oid)} onCancel={cancelUser} okText="Yes" cancelText="No">
+              <Popconfirm title="是否确定查看用户" onConfirm={confirmUser.bind(this, item.userId)} onCancel={cancelUser} okText="Yes" cancelText="No">
               <Button type="primary" >查看用户</Button>
               </Popconfirm>
             ]}

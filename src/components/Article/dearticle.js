@@ -6,7 +6,7 @@ const Answer = ({ children, comments }) => (
     author={<a>{comments.nickName}</a>}
     avatar={(
       <Avatar
-        src={comments.src}
+        src={comments.avatarUrl}
         alt={"User"}
       />
     )}
