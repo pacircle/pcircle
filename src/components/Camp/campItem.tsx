@@ -1,24 +1,35 @@
 import * as React from 'react';
 import { Card,Comment,Avatar,Button,Form } from 'antd';
 import {campProps} from "../../models/camp";
+import * as Redux from 'redux';
 import AnswerAdd from "../../components/Camp/answeradd";
 
 interface campitemProp {
   campProps:campProps
+  dispatch: Redux.Dispatch<any>
 }
-const Answer = ({ children, answers }) => (
+const Answer = ({ answers }) => (
   <Comment
-    author={<a>{answers.nickName}</a>}
+    author={<a>{"管理员"}</a>}
     avatar={(
-      <Avatar
-        src={answers.avatarUrl}
-        alt={"User"}
-      />
+      <Avatar style={{ color: '#f56a00', backgroundColor: '#fde3cf' }}>U</Avatar>
     )}
     content={<span>{answers.content}</span>}
   >
-    {children}
+    {/*{children}*/}
   </Comment>
+  // <Comment
+  //   author={<a>{answers.nickName}</a>}
+  //   avatar={(
+  //     <Avatar
+  //       src={answers.avatarUrl}
+  //       alt={"User"}
+  //     />
+  //   )}
+  //   content={<span>{answers.content}</span>}
+  // >
+  //   {/*{children}*/}
+  // </Comment>
 )
 class CampItem extends React.Component<campitemProp,{}> {
   constructor(props){
@@ -45,7 +56,7 @@ class CampItem extends React.Component<campitemProp,{}> {
             <Answer answers={item}/>
           ))}
         </div> : null}
-        <AnswerAdd camp={this.props.campProps._id}/>
+        <AnswerAdd campId={this.props.campProps._id} dispatch={this.props.dispatch}/>
       </Card>
     )
   }

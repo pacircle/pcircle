@@ -35,7 +35,7 @@ export function* queryAllCamp(action: Action<string>,effects: DVA.EffectsCommand
 }
 
 export function updateAllCampAction(payload: Array<campProps>) {
-  return createAction<Array<campProps>>(`${PREFIX}/updateAllCamp`)(payload)
+  return createAction<Array<campProps>>("updateAllCamp")(payload)
 }
 
 export function updateAllCamp(state: CampState, action: Action<Array<campProps>>) {

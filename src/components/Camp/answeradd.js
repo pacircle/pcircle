@@ -3,6 +3,8 @@ import {
   Form, Input, Icon, Button, DatePicker, InputNumber
 } from 'antd';
 
+import { addNewAnswerAction } from '../../models/camp/addNewAnswer'
+
 let id = 0;
 const { RangePicker } = DatePicker;
 const formItemLayout = {
@@ -34,8 +36,12 @@ class TimeRange extends React.Component {
       if (err) {
         return;
       }
-      console.log(fieldsValue)
-
+      // console.log(fieldsValue)
+      const data = {
+        campId: this.props.campId,
+        content: fieldsValue['answer-content']
+      }
+      this.props.dispatch(addNewAnswerAction(data))
     });
   }
   render() {
@@ -49,7 +55,7 @@ class TimeRange extends React.Component {
           label="训练营答案："
         >
           {/*<span className="ant-form-text">训练营题目优质答案：</span>*/}
-          {getFieldDecorator('content', {
+          {getFieldDecorator('answer-content', {
             rules: [{
               required: true,
               message: '请填入训练营优质答案',
@@ -62,7 +68,7 @@ class TimeRange extends React.Component {
       </Form>)
   }
 }
-const AnswerAdd = Form.create({ name: 'time_related_controls' })(TimeRange);
+const AnswerAdd = Form.create({ name: 'answer_related' })(TimeRange);
 
 
 export default AnswerAdd

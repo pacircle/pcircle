@@ -5,6 +5,7 @@ import * as Redux from 'redux';
 import {BackendResponse, request, RequestResponse} from "../../utils/request";
 import {message} from "antd";
 import {queryAllCampAction} from "./queryAllCamp";
+import {hashHistory} from "react-router";
 const requests:any = request
 export interface campItem {
   order: Number,
@@ -21,7 +22,7 @@ export function addNewCampAction(campItem: campItem) {
   return createAction<campItem>(`${PREFIX}/addNewCamp`)(campItem)
 }
 
-export function* addNewCamp(action: Action<string>,effects: DVA.EffectsCommandMap) {
+export function* addNewCamp(action: Action<campItem>,effects: DVA.EffectsCommandMap) {
   let url = "http://127.0.0.1:7979/camp/index?name=admin&&password=admin";
   console.log('test' +action.payload)
   console.log(action.payload.order)
@@ -43,17 +44,14 @@ export function* addNewCamp(action: Action<string>,effects: DVA.EffectsCommandMa
 }
 
 export function updateNewCampAction(payload: campProps) {
-  return createAction<campProps>(`${PREFIX}/updateNewCamp`)(payload)
+  return createAction<campProps>("updateNewCamp")(payload)
 }
 
 export function updateNewCamp(state: CampState, action: Action<campProps>) {
   let newState = {...state}
   const campData = action.payload
   const campList = newState.campList
-  // console.log('campList',campList1)
   campList.push(campData)
-  // console.log('campList1',campList1)
-  // console.log('camlist-change',campList)
   newState.campList = campList
   message.success("添加新一期训练营成功")
   // console.log(newState)
@@ -61,6 +59,7 @@ export function updateNewCamp(state: CampState, action: Action<campProps>) {
   // console.log(newState.campList)
   // console.log(CampState.campList)
   // this.props.dispatch(queryAllCampAction("http://127.0.0.1:7979/camp/all"))
+  // hashHistory.push({pathname: '/camp'})
   return newState
 }
 

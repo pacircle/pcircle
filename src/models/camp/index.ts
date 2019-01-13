@@ -1,14 +1,18 @@
 import {addNewCamp, updateNewCamp} from "./addNewCamp";
 import {queryAllCamp, updateAllCamp} from "./queryAllCamp";
+import {addNewAnswer, updateNewAnswer} from "./addNewAnswer";
 
 export interface answerProp {
   content: String
-  nickName: String,
-  userId: String,
-  avatarUrl: String
+  // nickName: String,
+  // userId: String,
+  // avatarUrl: String
+}
+interface idProps {
+  $oid: String
 }
 export interface campProps {
-  _id: JSON,
+  _id: any,
   order: Number
   content: String
   description: String
@@ -31,10 +35,12 @@ export default {
   state: initState,
   effects: {
     addNewCamp: addNewCamp,
-    queryAllCamp: queryAllCamp
+    queryAllCamp: queryAllCamp,
+    addNewAnswer: addNewAnswer
   },
   reducers: {
     updateNewCamp: updateNewCamp,
-    updateAllCamp: updateAllCamp
+    updateAllCamp: updateAllCamp,
+    updateNewAnswer: updateNewAnswer,
   }
 }

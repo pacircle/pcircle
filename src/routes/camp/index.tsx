@@ -30,6 +30,7 @@ class Camp extends React.Component<CampProps & MainDispatcherProps, {}> {
     this.props.dispatch(queryAllCampAction("http://127.0.0.1:7979/camp/all"))
   }
 
+
   render() {
     const campTestItem = []
     for (let i=0;i<2;i++){
@@ -53,7 +54,7 @@ class Camp extends React.Component<CampProps & MainDispatcherProps, {}> {
         <Mainview dispatch={this.props.dispatch}>
           {this.props.campList.map(item => {
             return (
-              <CampItem campProps={item}></CampItem>
+              <CampItem campProps={item} dispatch={this.props.dispatch}></CampItem>
             )
           })}
           <CampAdd dispatch={this.props.dispatch}/>
