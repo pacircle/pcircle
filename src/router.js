@@ -50,6 +50,16 @@ function RouterConfig({ history, app }) {
           cb(null, require('./routes/usdetail/index'))
         })
       }
+    },
+    {
+      path: '/camp',
+      name: 'Camp',
+      getComponent(nextState, cb) {
+        require.ensure([], (require) => {
+          registerModel(app, require('./models/camp/index').default);
+          cb(null, require('./routes/camp/index'))
+        })
+      }
     }
   ];
 

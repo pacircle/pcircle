@@ -75,6 +75,9 @@ class Menuss extends React.Component {
             <Menu.Item key="2"><Link to={"/user"}>所有用户信息查看</Link></Menu.Item>
             <Menu.Item key="3"><Link to={{ pathname: "/usdetail" }}>用户详细信息</Link></Menu.Item>
           </Menu.SubMenu>
+          <Menu.SubMenu key={"sub3"} title={<span><Icon type="database" /><span>训练营管理</span></span>}>
+            <Menu.Item key="4"><Link to={"/camp"}>训练营管理</Link></Menu.Item>
+          </Menu.SubMenu>
           {/*<Menu.SubMenu key={"sub3"} title={<span><Icon type="solution" /><span>评论管理</span></span>}>*/}
           {/*<Menu.Item key={"4"}>查看所有评论</Menu.Item>*/}
           {/*</Menu.SubMenu>*/}

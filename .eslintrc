@@ -55,7 +55,8 @@
     "no-script-url":0,
     "no-underscore-dangle": [0],
     "padded-blocks": [0],
-    "no-unused-vars": [0]
+    "no-unused-vars": [0],
+    "react/no-multi-comp": [0]
 
   },
   "parserOptions": {
