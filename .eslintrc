@@ -56,7 +56,8 @@
     "no-underscore-dangle": [0],
     "padded-blocks": [0],
     "no-unused-vars": [0],
-    "react/no-multi-comp": [0]
+    "react/no-multi-comp": [0],
+    "object-curly-spacing":[0]
 
   },
   "parserOptions": {

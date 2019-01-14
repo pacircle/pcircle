@@ -1,6 +1,7 @@
 import {queryArticleInfo, updateArticleInfo} from "./queryArticles";
 import {deleteArticle,deleteArticlesInfo} from "./deletearticle";
 import {changeMenuKeys} from "./changeMenuKeys";
+import {changeEliteArticle, updateEliteArticle} from "./changeEliteArticle";
 
 export interface answerProps {
   content: String,
@@ -52,11 +53,13 @@ export default {
   state: initState,
   effects: {
     queryArticleInfo: queryArticleInfo,
-    deleteArticlesInfo: deleteArticlesInfo
+    deleteArticlesInfo: deleteArticlesInfo,
+    changeEliteArticle: changeEliteArticle
   },
   reducers: {
     updateArticleInfo: updateArticleInfo,
     deleteArticle: deleteArticle,
-    changeMenuKeys: changeMenuKeys
+    changeMenuKeys: changeMenuKeys,
+    updateEliteArticle: updateEliteArticle
   }
 }

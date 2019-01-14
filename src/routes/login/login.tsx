@@ -74,7 +74,7 @@ class Login extends React.Component<{}, {}> {
               valuePropName: 'checked',
               initialValue: true,
             })(
-              {/*<Checkbox>Remember me</Checkbox>*/}
+              <Checkbox>Remember me</Checkbox>
             )}
             {/*<a className={forgotStyle} href="">Forgot password</a>*/}
             <Button type="primary" htmlType="submit" className={buttonStyle}>

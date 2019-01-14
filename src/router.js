@@ -60,6 +60,16 @@ function RouterConfig({ history, app }) {
           cb(null, require('./routes/camp/index'))
         })
       }
+    },
+    {
+      path: '/recommend',
+      name: 'Recommend',
+      getComponent(nextState, cb) {
+        require.ensure([], (require) => {
+          registerModel(app, require('./models/recommend/index').default);
+          cb(null, require('./routes/recommend/index'))
+        })
+      }
     }
   ];
 

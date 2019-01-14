@@ -1,8 +1,9 @@
-import { List, Avatar, Icon, Button, Popconfirm, message } from 'antd';
+import { List, Avatar, Icon, Button, Popconfirm, message, Tag } from 'antd';
 import { hashHistory } from 'react-router'
 import { deleteArticlesInfoAction } from "../../models/main/deletearticle";
 import Comments from './dearticle'
 import { changeMenuKeysAction } from "../../models/main/changeMenuKeys";
+import {changeEliteArticleAction} from "../../models/main/changeEliteArticle";
 const IconText = ({ type, text }) => (
   <span>
     <Icon type={type} style={{ marginRight: 8 }}></Icon>
@@ -50,6 +51,15 @@ const Articles = ({ listDatas, dispatch }) => {
     message.error('取消查看')
   }
 
+  const conElite = (id) => {
+    console.log('id', id)
+    // dispatch(deleteArticlesInfoAction(id))
+    dispatch(changeEliteArticleAction(id))
+  }
+  const cancelElite = (e) => {
+    console.log(e)
+    message.error('取消删除')
+  }
   return (
     <div style={{ marginLeft: '10px' }}>
       <List
@@ -72,12 +82,15 @@ const Articles = ({ listDatas, dispatch }) => {
               </Popconfirm>,
               <Popconfirm title="是否确定查看用户" onConfirm={confirmUser.bind(this, item.userId)} onCancel={cancelUser} okText="Yes" cancelText="No">
               <Button type="primary" >查看用户</Button>
+              </Popconfirm>,
+              <Popconfirm title="是否确定查看用户" onConfirm={conElite.bind(this, item._id.$oid)} onCancel={cancelElite} okText="Yes" cancelText="No">
+                <Button type="primary" >文章加精</Button>
               </Popconfirm>
             ]}
             extra={item.time}
           >
             <List.Item.Meta
-              avatar={<Avatar src={item.avatarUrl} />}
+              avatar={<div>{item.elite ? <Tag color="volcano">精华</Tag> : null}<Avatar src={item.avatarUrl} /></div>}
               title={<a href={item.href}>{item.title}</a>}
               description={item.sub}
             />
