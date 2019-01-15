@@ -16,5 +16,5 @@
     }
   },
   "hash": true,
-  "theme": "./src/theme.js",
+  "theme": "./src/theme.js"
 }
