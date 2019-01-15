@@ -23,7 +23,7 @@ export function addNewCampAction(campItem: campItem) {
 }
 
 export function* addNewCamp(action: Action<campItem>,effects: DVA.EffectsCommandMap) {
-  let url = "http://127.0.0.1:7979/camp/index?name=admin&&password=admin";
+  let url = "https://webackx.offerqueens.cn/camp/index?name=admin&&password=admin";
   console.log('test' +action.payload)
   console.log(action.payload.order)
   let params = `&&order=${action.payload.order}&&content=${action.payload.content}&&description=${action.payload.description}&&startTime=${action.payload.startTime}&&endTime=${action.payload.endTime}`

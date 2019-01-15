@@ -14,7 +14,7 @@ interface UserDispatchProps {
 class User extends React.Component<UserProps & UserDispatchProps,{}> {
 
   componentDidMount(){
-    this.props.dispatch(queryUserInfoAction("http://127.0.0.1:7979/super/user/all"))
+    this.props.dispatch(queryUserInfoAction("https://webackx.offerqueens.cn/super/user/all"))
   }
 
   render(){

@@ -19,7 +19,7 @@ export function addNewAnswerAction(answerProp: answerProp) {
 
 export function* addNewAnswer(action: Action<answerProp>,effects: DVA.EffectsCommandMap) {
   console.log(action.payload)
-  let url = "http://127.0.0.1:7979/camp/answer/add?name=admin&&password=admin";
+  let url = "https://webackx.offerqueens.cn/camp/answer/add?name=admin&&password=admin";
   let params = `&&content=${action.payload.content}&&campId=${action.payload.campId.$oid}`
   const response:RequestResponse = yield (() => {
     return requests(`${url} ` + `${params}`  )

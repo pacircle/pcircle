@@ -12,7 +12,7 @@ export function queryUserDetailAction(userId: string) {
 export function* queryUserDetail(action: Action<string>,effects: DVA.EffectsCommandMap) {
   console.log('*****')
   const response:RequestResponse = yield (() => {
-    return requests(`http://127.0.0.1:7979/super/user/one?name=admin&&password=admin&&userId=${action.payload}`)
+    return requests(`https://webackx.offerqueens.cn/super/user/one?name=admin&&password=admin&&userId=${action.payload}`)
   })()
   // let params = action.payload +"?name=admin&&password=admin"
   // console.log(params == "http://127.0.0.1:7979/super/user?name=admin&&password=admin")

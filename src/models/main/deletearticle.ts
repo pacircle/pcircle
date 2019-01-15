@@ -12,7 +12,7 @@ export function deleteArticlesInfoAction(id:string) {
 export function* deleteArticlesInfo(action: Action<string>, effects: DVA.EffectsCommandMap) {
 
   let response:RequestResponse = yield (() => {
-    return requests(`http://127.0.0.1:7979/super/article/delete?name=admin&&password=admin&&articleId=${action.payload}`)
+    return requests(`https://webackx.offerqueens.cn/super/article/delete?name=admin&&password=admin&&articleId=${action.payload}`)
   })()
 
   let BackendResponse: BackendResponse = response.data
