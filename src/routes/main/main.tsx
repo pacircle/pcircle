@@ -28,7 +28,7 @@ class Main extends React.Component<MainProps & MainDispatcherProps, {}> {
 
 
   componentDidMount(){
-    this.props.dispatch(queryActicleInfoAction("https://webackx.offerqueens.cn/super/index"))
+    this.props.dispatch(queryActicleInfoAction("http://127.0.0.1:7979/super/index"))
   }
 
   render() {
