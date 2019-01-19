@@ -62,6 +62,16 @@ function RouterConfig({ history, app }) {
       }
     },
     {
+      path: '/camuser',
+      name: 'Camuser',
+      getComponent(nextState, cb) {
+        require.ensure([], (require) => {
+          registerModel(app, require('./models/user/index').default);
+          cb(null, require('./routes/camuser/index'))
+        })
+      }
+    },
+    {
       path: '/recommend',
       name: 'Recommend',
       getComponent(nextState, cb) {
