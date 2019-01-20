@@ -79,8 +79,8 @@ class Menuss extends React.Component {
             <Menu.Item key="4"><Link to={"/camp"}>训练营素材管理</Link></Menu.Item>
             <Menu.Item key="5"><Link to={"/camuser"}>训练营用户管理</Link></Menu.Item>
           </Menu.SubMenu>
-          <Menu.SubMenu key={"sub4"} title={<span><Icon type="database" /><span>首页广告管理</span></span>}>
-            <Menu.Item key="6"><Link to={"/camp"}>首页素材管理</Link></Menu.Item>
+          <Menu.SubMenu key={"sub4"} title={<span><Icon type="laptop" /><span>首页广告管理</span></span>}>
+            <Menu.Item key="6"><Link to={"/rotate"}>首页素材管理</Link></Menu.Item>
           </Menu.SubMenu>
           {/*<Menu.SubMenu key={"sub4"} title={<span><Icon type="picture" /><span>首页文章管理</span></span>}>*/}
             {/*<Menu.Item key="5"><Link to={"/recommend"}>文章及图片显示</Link></Menu.Item>*/}

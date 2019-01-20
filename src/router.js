@@ -80,7 +80,17 @@ function RouterConfig({ history, app }) {
           cb(null, require('./routes/recommend/index'))
         })
       }
-    }
+    },
+    {
+      path: '/rotate',
+      name: 'Rotate',
+      getComponent(nextState, cb) {
+        require.ensure([], (require) => {
+          registerModel(app, require('./models/rotate/index').default);
+          cb(null, require('./routes/rotate/index'))
+        })
+      }
+    },
   ];
 
   return <Router history={history} routes={routes} />;
