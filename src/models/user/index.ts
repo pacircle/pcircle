@@ -1,4 +1,5 @@
 import {queryUserInfo,updateUserInfo} from "./queryUserInfos";
+import {addNewUsers, updateNewUsers, updateNewUsersAction} from "./addNewUsers";
 
 export interface UserState {
   userInfos: Array<userProps>
@@ -64,9 +65,11 @@ export default {
   namespace: PREFIX,
   state: initState,
   effects: {
-    queryUserInfo: queryUserInfo
+    queryUserInfo: queryUserInfo,
+    addNewUsers: addNewUsers
   },
   reducers: {
-    updateUserInfo: updateUserInfo
+    updateUserInfo: updateUserInfo,
+    updateNewUsers: updateNewUsers
   }
 }

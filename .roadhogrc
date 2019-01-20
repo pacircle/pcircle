@@ -16,6 +16,5 @@
     }
   },
   "hash": true,
-  "theme": "./src/theme.js",
-  "publicPath": "https://cdn.pp.sjtudoit.com/"
+  "theme": "./src/theme.js"
 }
