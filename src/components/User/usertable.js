@@ -121,12 +121,30 @@ class UserTable extends React.Component {
       title: '用户openid',
       dataIndex: '_id',
       key: '_id',
-      ...this.getColumnSearchProps('_id')
+      ...this.getColumnSearchProps('_id'),
+      width: 100,
     }, {
-      title: "用户性别",
-      dataIndex: "gender",
-      key: "gender",
-      ...this.getColumnSearchProps('gender')
+      title: "用户复盘分享",
+      dataIndex: "inviteMember",
+      key: "inviteMember",
+      ...this.getColumnSearchProps('inviteMember')
+    }, {
+      title: "用户复盘分享列表",
+      dataIndex: "inviteList",
+      key: "inviteList",
+      ...this.getColumnSearchProps('inviteList'),
+      width: '10%',
+    }, {
+      title: "用户训练营分享",
+      dataIndex: "campMember",
+      key: "campMember",
+      ...this.getColumnSearchProps('campMember')
+    }, {
+      title: "用户复盘分享列表",
+      dataIndex: "campList",
+      key: "campList",
+      ...this.getColumnSearchProps('campList'),
+      width: '10%',
     }, {
       title: 'operation',
       dataIndex: 'operation',
@@ -144,7 +162,7 @@ class UserTable extends React.Component {
       )
     }]
     return (
-      <Table dataSource={this.state.data} columns={colums} />
+      <Table dataSource={this.state.data} columns={colums} scroll={{ x: 1300 }} />
     )
   }
 }

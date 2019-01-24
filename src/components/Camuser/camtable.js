@@ -134,6 +134,17 @@ class CamTable extends React.Component {
       dataIndex: 'nickName',
       key: 'nickName',
       ...this.getColumnSearchProps('nickName')
+    }, {
+      title: "用户训练营分享",
+      dataIndex: "campMember",
+      key: "campMember",
+      ...this.getColumnSearchProps('campMember')
+    }, {
+      title: "用户复盘分享列表",
+      dataIndex: "campList",
+      key: "campList",
+      ...this.getColumnSearchProps('campList'),
+      width: '10%',
     }]
     const { loading, selectedRowKeys } = this.state;
     const rowSelection = {
@@ -160,7 +171,7 @@ class CamTable extends React.Component {
             {hasSelected ? `选择 ${selectedRowKeys.length} 个用户` : ''}
           </span>
         </div>
-        <Table rowSelection={rowSelection} dataSource={this.state.data} columns={colums} />
+        <Table rowSelection={rowSelection} dataSource={this.state.data} columns={colums} scroll={{ x: 800 }} />
       </div>
     )
   }
