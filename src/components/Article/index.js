@@ -83,7 +83,7 @@ const Articles = ({ listDatas, dispatch }) => {
               <Popconfirm title="是否确定查看用户" onConfirm={confirmUser.bind(this, item.userId)} onCancel={cancelUser} okText="Yes" cancelText="No">
               <Button type="primary" >查看用户</Button>
               </Popconfirm>,
-              <Popconfirm title="是否确定查看用户" onConfirm={conElite.bind(this, item._id.$oid)} onCancel={cancelElite} okText="Yes" cancelText="No">
+              <Popconfirm title="是否确定将文章修改为精华贴" onConfirm={conElite.bind(this, item._id.$oid)} onCancel={cancelElite} okText="Yes" cancelText="No">
                 <Button type="primary" >文章加精</Button>
               </Popconfirm>
             ]}
