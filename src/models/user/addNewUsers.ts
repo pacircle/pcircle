@@ -12,7 +12,8 @@ export function addNewUsersAction(userIds: Array<string>) {
 
 export function* addNewUsers(action: Action<string>,effects: DVA.EffectsCommandMap) {
   console.log('addNewUsers')
-  let url = "http://127.0.0.1:7979/camp/user/add?name=admin&&password=admin";
+  let url = "https://wechatx.offerqueens.cn/camp/user/add?name=admin&&password=admin";
+  // let url = "http://127.0.0.1:7979/camp/user/add?name=admin&&password=admin";
   // console.log(action.payload + `${params}`)
   console.log(action.payload)
   let params = `&&userId=${action.payload}`

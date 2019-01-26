@@ -18,7 +18,9 @@ export function* changeEliteArticle(action: Action<string>,effects: DVA.EffectsC
   //   })
   // })()
   let response:RequestResponse = yield (() => {
-    return requests(`http://127.0.0.1:7979/super/article/elite?name=admin&&password=admin&&articleId=${action.payload}`)
+    // return requests(`http://127.0.0.1:7979/super/article/elite?name=admin&&password=admin&&articleId=${action.payload}`)
+    return requests(`https://wechatx.offerqueens.cn/super/article/elite?name=admin&&password=admin&&articleId=${action.payload}`)
+
   })()
 
   const backendData:BackendResponse = response.data

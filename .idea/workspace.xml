@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06c41776-661d-4a59-b0f6-7f9b42d9f8cf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Article/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Article/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Camuser/camtable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Camuser/camtable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/User/usertable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/User/usertable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Camp/answeradd.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Camp/answeradd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Camp/campadd.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Camp/campadd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Rotate/Upurl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rotate/Upurl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/camp/addNewAnswer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/camp/addNewAnswer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/camp/addNewCamp.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/camp/addNewCamp.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/main/changeEliteArticle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/main/changeEliteArticle.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/main/deletearticle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/main/deletearticle.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/rotate/addNewAddress.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/rotate/addNewAddress.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/usdetail/queryUserDetail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/usdetail/queryUserDetail.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/user/addNewUsers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user/addNewUsers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/camp/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/camp/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/camuser/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/camuser/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/main/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/rotate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/user/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/user/index.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,20 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/camuser/index.tsx">
+      <file leaf-file-name="campadd.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Camp/campadd.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="43" column="15" lean-forward="true" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="camtable.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Camuser/camtable.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="173" column="103" selection-start-line="173" selection-start-column="103" selection-end-line="173" selection-end-column="103" />
+            <state relative-caret-position="270">
+              <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -39,20 +43,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/user/index.tsx">
+      <file leaf-file-name="Uppage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Rotate/Uppage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+            <state relative-caret-position="352">
+              <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="usertable.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/User/usertable.js">
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/rotate/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="164" column="59" lean-forward="true" selection-start-line="164" selection-start-column="59" selection-end-line="164" selection-end-column="79" />
+            <state relative-caret-position="323">
+              <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Upurl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Rotate/Upurl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="64" column="76" selection-start-line="64" selection-start-column="76" selection-end-line="64" selection-end-column="76" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="answeradd.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Camp/answeradd.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="27" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -60,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/main/main.tsx">
+      <file leaf-file-name="addNewAnswer.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/camp/addNewAnswer.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+            <state relative-caret-position="150">
+              <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -79,6 +107,7 @@
       <find>browserHistory</find>
       <find>添加新一期</find>
       <find>sjtudoit</find>
+      <find>http</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/models</dir>
@@ -106,9 +135,7 @@
         <option value="$PROJECT_DIR$/src/routes/usdetail/index.tsx" />
         <option value="$PROJECT_DIR$/src/components/Usdetail/display.js" />
         <option value="$PROJECT_DIR$/src/components/Camp/camp.js" />
-        <option value="$PROJECT_DIR$/src/components/Camp/campadd.js" />
         <option value="$PROJECT_DIR$/src/components/Camp/campItem.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Camp/answeradd.js" />
         <option value="$PROJECT_DIR$/src/models/camp/index.ts" />
         <option value="$PROJECT_DIR$/src/models/camp/queryAllCamp.ts" />
         <option value="$PROJECT_DIR$/src/models/main/index.ts" />
@@ -119,30 +146,32 @@
         <option value="$PROJECT_DIR$/src/components/Recommend/addPic.js" />
         <option value="$PROJECT_DIR$/.eslintrc" />
         <option value="$PROJECT_DIR$/.roadhogrc" />
-        <option value="$PROJECT_DIR$/src/models/camp/addNewAnswer.ts" />
-        <option value="$PROJECT_DIR$/src/models/camp/addNewCamp.ts" />
-        <option value="$PROJECT_DIR$/src/routes/camp/index.tsx" />
-        <option value="$PROJECT_DIR$/src/models/main/changeEliteArticle.ts" />
-        <option value="$PROJECT_DIR$/src/models/main/deletearticle.ts" />
-        <option value="$PROJECT_DIR$/src/routes/main/main.tsx" />
-        <option value="$PROJECT_DIR$/src/models/usdetail/queryUserDetail.ts" />
-        <option value="$PROJECT_DIR$/src/routes/user/index.tsx" />
         <option value="$PROJECT_DIR$/src/models/Camuser/index.ts" />
-        <option value="$PROJECT_DIR$/src/routes/camuser/index.tsx" />
         <option value="$PROJECT_DIR$/src/models/user/index.ts" />
-        <option value="$PROJECT_DIR$/src/models/user/addNewUsers.ts" />
         <option value="$PROJECT_DIR$/src/router.js" />
         <option value="$PROJECT_DIR$/src/components/Layout/menus.js" />
         <option value="$PROJECT_DIR$/src/components/Rotate/Uppage.css" />
         <option value="$PROJECT_DIR$/src/components/Rotate/Uppage.js" />
-        <option value="$PROJECT_DIR$/src/components/Rotate/Upurl.js" />
         <option value="$PROJECT_DIR$/src/models/rotate/index.ts" />
-        <option value="$PROJECT_DIR$/src/routes/rotate/index.tsx" />
         <option value="$PROJECT_DIR$/src/models/rotate/querynowaddress.ts" />
-        <option value="$PROJECT_DIR$/src/models/rotate/addNewAddress.ts" />
         <option value="$PROJECT_DIR$/src/components/Article/index.js" />
         <option value="$PROJECT_DIR$/src/components/User/usertable.js" />
         <option value="$PROJECT_DIR$/src/components/Camuser/camtable.js" />
+        <option value="$PROJECT_DIR$/src/models/usdetail/queryUserDetail.ts" />
+        <option value="$PROJECT_DIR$/src/models/camp/addNewCamp.ts" />
+        <option value="$PROJECT_DIR$/src/models/main/changeEliteArticle.ts" />
+        <option value="$PROJECT_DIR$/src/models/main/deletearticle.ts" />
+        <option value="$PROJECT_DIR$/src/models/rotate/addNewAddress.ts" />
+        <option value="$PROJECT_DIR$/src/models/user/addNewUsers.ts" />
+        <option value="$PROJECT_DIR$/src/routes/camuser/index.tsx" />
+        <option value="$PROJECT_DIR$/src/routes/main/main.tsx" />
+        <option value="$PROJECT_DIR$/src/routes/rotate/index.tsx" />
+        <option value="$PROJECT_DIR$/src/routes/user/index.tsx" />
+        <option value="$PROJECT_DIR$/src/routes/camp/index.tsx" />
+        <option value="$PROJECT_DIR$/src/models/camp/addNewAnswer.ts" />
+        <option value="$PROJECT_DIR$/src/components/Camp/answeradd.js" />
+        <option value="$PROJECT_DIR$/src/components/Camp/campadd.js" />
+        <option value="$PROJECT_DIR$/src/components/Rotate/Upurl.js" />
       </list>
     </option>
   </component>
@@ -162,8 +191,8 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="262" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="298" />
     <option name="y" value="23" />
     <option name="width" value="1174" />
     <option name="height" value="823" />
@@ -197,19 +226,25 @@
               <item name="pcircle" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Article" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pcircle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pcircle" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Camp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pcircle" type="b2602c69:ProjectViewProjectNode" />
               <item name="pcircle" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Rotate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pcircle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pcircle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pcircle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pcircle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -217,21 +252,14 @@
               <item name="pcircle" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="camuser" type="462c0819:PsiDirectoryNode" />
+              <item name="camp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pcircle" type="b2602c69:ProjectViewProjectNode" />
               <item name="pcircle" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pcircle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pcircle" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="rotate" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -315,42 +343,43 @@
       <workItem from="1547461564555" duration="10000" />
       <workItem from="1547462022600" duration="12431000" />
       <workItem from="1547977666303" duration="8308000" />
-      <workItem from="1548318723300" duration="1756000" />
+      <workItem from="1548318723300" duration="2342000" />
+      <workItem from="1548500299586" duration="2186000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227516000" />
+    <option name="totallyTimeSpent" value="230288000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="262" y="23" width="1174" height="823" extended-state="0" />
+    <frame x="298" y="23" width="1174" height="823" extended-state="1" />
     <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.36914602" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4952199" visible="true" weight="0.20641804" />
-      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" sideWeight="0.5047801" side_tool="true" weight="0.15742025" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.36914602" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4952199" visible="true" weight="0.18126626" />
       <window_info id="Structure" order="1" sideWeight="0.5047801" side_tool="true" weight="0.15742025" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -358,12 +387,12 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.4201102" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -399,13 +428,6 @@
     <entry file="file://$PROJECT_DIR$/src/routes/commodity.tsx" />
     <entry file="file://$PROJECT_DIR$/src/components/Camp/campItem.tsx" />
     <entry file="file://$PROJECT_DIR$/src/components/Usdetail/display.js" />
-    <entry file="file://$PROJECT_DIR$/src/routes/usdetail/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -415,7 +437,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/recommend/upload.css" />
     <entry file="file://$PROJECT_DIR$/src/components/Recommend/addPic.js" />
-    <entry file="file://$PROJECT_DIR$/src/routes/recommend/index.tsx" />
     <entry file="file://$PROJECT_DIR$/.eslintrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
@@ -437,24 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/main/changeEliteArticle.ts" />
-    <entry file="file://$PROJECT_DIR$/src/models/main/changeMenuKeys.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/main/deletearticle.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/main/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -462,14 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/main/queryArticles.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/recommend/index.ts" />
     <entry file="file://$PROJECT_DIR$/src/models/usdetail/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -477,38 +472,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/usdetail/queryUserDetail.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/login/login.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="84" column="12" lean-forward="true" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/camp/index.ts" />
     <entry file="file://$PROJECT_DIR$/src/models/camuser/index.ts" />
-    <entry file="file://$PROJECT_DIR$/src/routes/camp/index.tsx" />
     <entry file="file://$PROJECT_DIR$/src/models/camuser/queryAllUsers.ts" />
-    <entry file="file://$PROJECT_DIR$/src/models/camp/addNewAnswer.ts" />
-    <entry file="file://$PROJECT_DIR$/src/models/camp/addNewCamp.ts" />
-    <entry file="file://$PROJECT_DIR$/src/models/camp/queryAllCamp.ts" />
     <entry file="file://$PROJECT_DIR$/src/models/user/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/login/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-end-line="24" />
         </state>
       </provider>
     </entry>
@@ -546,60 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/user/addNewUsers.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="37" lean-forward="true" selection-end-line="48" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Rotate/Uppage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Rotate/Upurl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="40" column="10" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/user/queryUserInfos.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="46" lean-forward="true" selection-end-line="46" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/rotate/addNewAddress.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/rotate/querynowaddress.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="36" column="35" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/rotate/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -607,38 +523,6 @@
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/rotate/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Camp/campadd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-941" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Camp/answeradd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="64" column="12" lean-forward="true" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Article/dearticle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -652,17 +536,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/user/index.tsx">
+    <entry file="file://$PROJECT_DIR$/src/components/Camuser/camtable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/main/main.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+        <state relative-caret-position="318">
+          <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -676,17 +556,218 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/camuser/index.tsx">
+    <entry file="file://$PROJECT_DIR$/src/models/camp/queryAllCamp.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/login/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="43" column="15" lean-forward="true" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Camuser/camtable.js">
+    <entry file="file://$PROJECT_DIR$/src/models/main/changeEliteArticle.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="173" column="103" selection-start-line="173" selection-start-column="103" selection-end-line="173" selection-end-column="103" />
+        <state relative-caret-position="247">
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/main/changeMenuKeys.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/main/queryArticles.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/main/deletearticle.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-267">
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/user/queryUserInfos.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/user/addNewUsers.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/usdetail/queryUserDetail.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/rotate/querynowaddress.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/rotate/addNewAddress.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/recommend/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/camuser/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="75" selection-start-line="19" selection-start-column="75" selection-end-line="19" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Article/dearticle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/user/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/main/main.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="31" column="78" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/login/login.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="84" column="12" lean-forward="true" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/recommend/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-326" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/usdetail/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/camp/addNewCamp.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="56" column="2" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/camp/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="30" column="74" lean-forward="true" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/camp/addNewAnswer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Camp/answeradd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Rotate/Uppage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/rotate/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Rotate/Upurl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="64" column="76" selection-start-line="64" selection-start-column="76" selection-end-line="64" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Camp/campadd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

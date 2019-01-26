@@ -27,7 +27,8 @@ class Camp extends React.Component<CampProps & MainDispatcherProps, {}> {
 
 
   componentDidMount(){
-    this.props.dispatch(queryAllCampAction("http://127.0.0.1:7979/camp/all"))
+    // this.props.dispatch(queryAllCampAction("http://127.0.0.1:7979/camp/all"))
+    this.props.dispatch(queryAllCampAction("https://wechatx.offerqueens.cn/camp/all"))
   }
 
 

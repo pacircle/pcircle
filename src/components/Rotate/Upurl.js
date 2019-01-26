@@ -12,7 +12,7 @@ const formItemLayout = {
     sm: { span: 12 },
   },
 };
-
+const { TextArea } = Input;
 class Upurl extends React.Component {
   state = {
     fields: {
@@ -59,10 +59,10 @@ class Upurl extends React.Component {
               message: '请填入更新的图片对应文章地址',
             }],
           })(
-            <Input />
+            <TextArea style={{marginTop: '20px'}} />
           )}
         </Form.Item>
-        <Button type="primary" htmlType="submit">添加图片对应文章地址</Button>
+        <Button type="primary" htmlType="submit" style={{marginTop: '20px'}}>添加图片对应文章地址</Button>
       </Form>)
   }
 }

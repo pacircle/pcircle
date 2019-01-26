@@ -7,6 +7,7 @@ import { addNewAnswerAction } from '../../models/camp/addNewAnswer'
 
 let id = 0;
 const { RangePicker } = DatePicker;
+const { TextArea } = Input;
 const formItemLayout = {
   labelCol: {
     xs: { span: 24 },
@@ -61,7 +62,7 @@ class TimeRange extends React.Component {
               message: '请填入训练营优质答案',
             }],
           })(
-            <Input />
+            <TextArea />
           )}
         </Form.Item>
         <Button type="primary" htmlType="submit">添加优质回答</Button>

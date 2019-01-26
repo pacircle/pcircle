@@ -12,7 +12,8 @@ export function addNewAddressAction(address: string) {
 
 export function* addNewAddress(action: Action<string>,effects: DVA.EffectsCommandMap) {
   console.log('addNewAddress')
-  let url = "http://127.0.0.1:7979/super/rotate/add?name=admin&&password=admin";
+  // let url = "http://127.0.0.1:7979/super/rotate/add?name=admin&&password=admin";
+  let url = "https://wechatx.offerqueens.cn/super/rotate/add?name=admin&&password=admin";
   // console.log(action.payload + `${params}`)
   console.log(action.payload)
   let params = `&&address=${action.payload}`

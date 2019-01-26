@@ -26,7 +26,8 @@ class Rotate extends React.Component<RotateProps & RotateDispatcherProps, {}> {
 
 
   componentDidMount(){
-    this.props.dispatch(queryNowAddressAction('http://127.0.0.1:7979/super/rotate/index'))
+    // this.props.dispatch(queryNowAddressAction('http://127.0.0.1:7979/super/rotate/index'))
+    this.props.dispatch(queryNowAddressAction('https://wechatx.offerqueens.cn/super/rotate/index'))
   }
 
   render() {
