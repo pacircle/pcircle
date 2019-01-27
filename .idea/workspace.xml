@@ -3,21 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="06c41776-661d-4a59-b0f6-7f9b42d9f8cf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Camp/answeradd.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Camp/answeradd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Camp/campadd.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Camp/campadd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Rotate/Upurl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rotate/Upurl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/camp/addNewAnswer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/camp/addNewAnswer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/camp/addNewCamp.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/camp/addNewCamp.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/main/changeEliteArticle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/main/changeEliteArticle.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/main/deletearticle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/main/deletearticle.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/rotate/addNewAddress.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/rotate/addNewAddress.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/usdetail/queryUserDetail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/usdetail/queryUserDetail.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/user/addNewUsers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user/addNewUsers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/camp/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/camp/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/camuser/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/camuser/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/main/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/rotate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/user/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/user/index.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="campadd.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="campadd.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Camp/campadd.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -43,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Uppage.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Uppage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Rotate/Uppage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+            <state relative-caret-position="194">
+              <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -191,8 +176,8 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="298" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="242" />
     <option name="y" value="23" />
     <option name="width" value="1174" />
     <option name="height" value="823" />
@@ -344,15 +329,16 @@
       <workItem from="1547462022600" duration="12431000" />
       <workItem from="1547977666303" duration="8308000" />
       <workItem from="1548318723300" duration="2342000" />
-      <workItem from="1548500299586" duration="2186000" />
+      <workItem from="1548500299586" duration="2777000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230288000" />
+    <option name="totallyTimeSpent" value="230879000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="298" y="23" width="1174" height="823" extended-state="1" />
+    <frame x="242" y="23" width="1174" height="823" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -415,16 +401,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/models/rotate/addNewAddress.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/commodity.tsx" />
     <entry file="file://$PROJECT_DIR$/src/components/Camp/campItem.tsx" />
     <entry file="file://$PROJECT_DIR$/src/components/Usdetail/display.js" />
@@ -737,13 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Rotate/Uppage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/rotate/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -771,6 +740,20 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/antd/lib/upload/Upload.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-312">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Rotate/Uppage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
         </state>
       </provider>
     </entry>

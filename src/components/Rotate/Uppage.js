@@ -17,7 +17,7 @@ const fileList = [{
 }];
 
 const props = {
-  action: 'http://127.0.0.1:7979/super/rotate/create?',
+  action: 'https://wechatx.offerqueens.cn/super/rotate/create?',
   listType: 'picture',
   defaultFileList: [...fileList],
   className: 'upload-list-inline',
