@@ -40,15 +40,15 @@ class Rotate extends React.Component<RotateProps & RotateDispatcherProps, {}> {
           {/*<Upitem/>*/}
           <Card
             hoverable
-            style={{ width: 500 }}
+            style={{ width: 600 }}
             cover={<img alt="example" src={wechat} />}
           >
             <Meta
-              title="当前对应文章网址"
+              title="当前对应文章内容"
               description={this.props.addressProp? `${this.props.addressProp.address}`:"暂无当前网址"}
             />
           </Card>
-          <UrlAdd dispatch={this.props.dispatch}/>
+          <UrlAdd dispatch={this.props.dispatch} />
         </Mainview>
       </div>
     )

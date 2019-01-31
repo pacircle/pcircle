@@ -16,8 +16,8 @@ class Camuser extends React.Component<UserProps & UserDispatchProps, {}> {
 
 
   componentDidMount(){
-    // this.props.dispatch(queryUserInfoAction("http://127.0.0.1:7979/super/user/all"))
-    this.props.dispatch(queryUserInfoAction("https://wechatx.offerqueens.cn/super/user/all"))
+    // this.props.dispatch(queryUserInfoAction("http://127.0.0.1:7979/camp/user/all"))
+    this.props.dispatch(queryUserInfoAction("https://wechatx.offerqueens.cn/camp/user/all"))
   }
 
 
