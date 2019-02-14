@@ -14,6 +14,7 @@ import {style} from "typestyle"
 
 import {Menu,Icon,Layout,Card} from 'antd';
 import {queryNowAddressAction} from "../../models/rotate/querynowaddress";
+import {changeMenuKeysAction} from "../../models/main/changeMenuKeys";
 declare function require(path: string): any;
 type RotateProps = RotateModelState
 
@@ -28,6 +29,7 @@ class Rotate extends React.Component<RotateProps & RotateDispatcherProps, {}> {
   componentDidMount(){
     // this.props.dispatch(queryNowAddressAction('http://127.0.0.1:7979/super/rotate/index'))
     this.props.dispatch(queryNowAddressAction('https://wechatx.offerqueens.cn/super/rotate/index'))
+    this.props.dispatch(changeMenuKeysAction(["7", "sub4"]))
   }
 
   render() {

@@ -1,12 +1,13 @@
 import {queryUserInfo,updateUserInfo} from "./queryUserInfos";
 import {addNewUsers, updateNewUsers, updateNewUsersAction} from "./addNewUsers";
+import {deleteUserInfo, updateDeleteUser} from "./deleteUserInfo";
 
 export interface UserState {
   userInfos: Array<userProps>
 }
 
 export interface userProps {
-  id: String,
+  _id: String,
   nickName: String,
   avatarUrl: String,
   city: String,
@@ -66,10 +67,12 @@ export default {
   state: initState,
   effects: {
     queryUserInfo: queryUserInfo,
-    addNewUsers: addNewUsers
+    addNewUsers: addNewUsers,
+    deleteUserInfo: deleteUserInfo
   },
   reducers: {
     updateUserInfo: updateUserInfo,
-    updateNewUsers: updateNewUsers
+    updateNewUsers: updateNewUsers,
+    updateDeleteUser: updateDeleteUser
   }
 }

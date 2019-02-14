@@ -6,6 +6,7 @@ import {queryUserInfoAction} from "../../models/user/queryUserInfos";
 import {connect} from "dva";
 import UserTable from '../../components/User/usertable';
 import {style} from "typestyle";
+import {changeMenuKeysAction} from "../../models/main/changeMenuKeys";
 type UserProps = UserModelState
 interface UserDispatchProps {
   dispatch: Redux.Dispatch<any>
@@ -16,6 +17,7 @@ class User extends React.Component<UserProps & UserDispatchProps,{}> {
   componentDidMount(){
     // this.props.dispatch(queryUserInfoAction("http://127.0.0.1:7979/super/user/all"))
     this.props.dispatch(queryUserInfoAction("https://wechatx.offerqueens.cn/super/user/all"))
+    this.props.dispatch(changeMenuKeysAction(["3", "sub2"]))
   }
 
   render(){

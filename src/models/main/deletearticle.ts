@@ -34,6 +34,6 @@ export function deleteArticle(state: MainState, action: Action<string>) {
   let id = action.payload
   let articles = newState.articles
   newState.articles = articles.filter(item => item._id.$oid !== id)
-  message.success('删除成功')
+  message.success('删除文章成功')
   return newState
 }

@@ -95,7 +95,7 @@ const Articles = ({ listDatas, dispatch }) => {
               description={item.sub}
             />
             {item.content}
-            <Comments commentList={item.commentList} />
+            <Comments commentList={item.commentList} dispatch={dispatch} />
           </List.Item>
         )}
       >

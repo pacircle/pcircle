@@ -2,6 +2,8 @@ import {queryArticleInfo, updateArticleInfo} from "./queryArticles";
 import {deleteArticle,deleteArticlesInfo} from "./deletearticle";
 import {changeMenuKeys} from "./changeMenuKeys";
 import {changeEliteArticle, updateEliteArticle} from "./changeEliteArticle";
+// import {queryArticleInfos, updateArticleInfos} from "../article/addNewArticle";
+import {deleteCommentInfo, updateCommentInfo, updateCommentInfoAction} from "./deletecomment";
 
 export interface answerProps {
   content: String,
@@ -40,6 +42,12 @@ export interface MainState {
   OpenKeys: Array<String>
 }
 
+export interface articleItem {
+  openid: String,
+  title: String,
+  content: String
+}
+
 export const PREFIX = 'main'
 
 export const initState: MainState = {
@@ -54,12 +62,16 @@ export default {
   effects: {
     queryArticleInfo: queryArticleInfo,
     deleteArticlesInfo: deleteArticlesInfo,
-    changeEliteArticle: changeEliteArticle
+    changeEliteArticle: changeEliteArticle,
+    // queryArticleInfos: queryArticleInfos,
+    deleteCommentInfo: deleteCommentInfo
   },
   reducers: {
     updateArticleInfo: updateArticleInfo,
     deleteArticle: deleteArticle,
     changeMenuKeys: changeMenuKeys,
-    updateEliteArticle: updateEliteArticle
+    updateEliteArticle: updateEliteArticle,
+    // updateArticleInfos: updateArticleInfos,
+    updateCommentInfo: updateCommentInfo
   }
 }
