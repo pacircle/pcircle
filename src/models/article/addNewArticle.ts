@@ -13,7 +13,8 @@ export function addNewActicleAction(articleItem: articleItem) {
 
 export function* addNewActicle(action: Action<articleItem>,effects: DVA.EffectsCommandMap) {
   console.log('addNewArticle')
-  let url= "http://127.0.0.1:7979/super/article/add?"
+  //let url= "http://127.0.0.1:7979/super/article/add?"
+  let url= "https://wechatx.offerqueens.cn/super/article/add?"
   let sub = action.payload.content.substring(0,20)
   let params = `&&name=admin&&password=admin&&openid=${action.payload.openid}&&title=${action.payload.title}&&content=${action.payload.content}&&sub=${sub}`
   console.log(`${url} ` + `${params}`)
