@@ -15,6 +15,7 @@ class CamTable extends React.Component {
       data: this.props.userInfos,
       selectedRowKeys: [],
       loading: false,
+      selectedKeys: []
     }
     this.getColumnSearchProps = this.getColumnSearchProps.bind(this)
     this.handleSearch = this.handleSearch.bind(this)
@@ -26,7 +27,14 @@ class CamTable extends React.Component {
 
   onSelectChange = (selectedRowKeys) => {
     console.log('selectedRowKeys changed: ', selectedRowKeys);
-    this.setState({ selectedRowKeys });
+    let selectedKeys = this.state.selectedKeys;
+    for (let i = 0; i < selectedRowKeys.length; i++) {
+      let index = selectedRowKeys[i]
+      selectedKeys.push(this.state.data[index]._id)
+      console.log(this.state.data[index]._id)
+    }
+    this.setState({ selectedKeys });
+    this.setState({ selectedRowKeys })
   }
 
   getColumnSearchProps = (dataIndex) => ({
@@ -79,7 +87,7 @@ class CamTable extends React.Component {
 
   start = () => {
     this.setState({ loading: true });
-    this.props.dispatch(addNewUsersAction(this.state.selectedRowKeys))
+    this.props.dispatch(addNewUsersAction(this.state.selectedKeys))
     // ajax request after empty completing
     setTimeout(() => {
       this.setState({
@@ -134,6 +142,11 @@ class CamTable extends React.Component {
       dataIndex: 'nickName',
       key: 'nickName',
       ...this.getColumnSearchProps('nickName')
+    }, {
+      title: '用户是否已添加',
+      dataIndex: 'include',
+      key: 'include',
+      ...this.getColumnSearchProps('include')
     }, {
       title: "用户训练营分享",
       dataIndex: "campMember",

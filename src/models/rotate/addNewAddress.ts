@@ -12,7 +12,8 @@ export function addNewAddressAction(address: string) {
 
 export function* addNewAddress(action: Action<string>,effects: DVA.EffectsCommandMap) {
   console.log('addNewAddress')
-  let url = "http://127.0.0.1:7979/super/rotate/add?name=admin&&password=admin";
+  // let url = "http://127.0.0.1:7979/super/rotate/add?name=admin&&password=admin";
+  let url = "https://wechatx.offerqueens.cn/super/rotate/add?name=admin&&password=admin";
   // console.log(action.payload + `${params}`)
   console.log(action.payload)
   let params = `&&address=${action.payload}`
@@ -27,7 +28,7 @@ export function* addNewAddress(action: Action<string>,effects: DVA.EffectsComman
 
   const backendData:BackendResponse = response.data
   // console.log('response',response)
-  // console.log('backdata',backendData)
+  console.log('backdata',backendData)
   if (!response || response.err || !backendData || 200 !== backendData.state){
     message.error('出错啦')
     return null

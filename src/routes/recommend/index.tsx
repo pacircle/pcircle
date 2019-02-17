@@ -51,7 +51,6 @@ class Recommend extends React.Component<RecommendProps & RecommendDispatcherProp
     return (
       <div>
         <Mainview dispatch={this.props.dispatch}>
-          <div>Recommend</div>
           <AddPic/>
         </Mainview>
       </div>

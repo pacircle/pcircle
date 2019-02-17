@@ -5,14 +5,14 @@ import {BackendResponse, request, RequestResponse} from "../../utils/request";
 import {message} from "antd";
 const requests:any = request
 
-export function addNewUsersAction(userIds: Array<string>) {
-  console.log(userIds)
-  return createAction<Array<string>>(`${PREFIX}/addNewUsers`)(userIds)
+export function deleteUserInfoAction(userId: string) {
+  console.log(userId)
+  return createAction<string>(`${PREFIX}/deleteUserInfo`)(userId)
 }
 
-export function* addNewUsers(action: Action<string>,effects: DVA.EffectsCommandMap) {
-  console.log('addNewUsers')
-  let url = "https://wechatx.offerqueens.cn/camp/user/add?name=admin&&password=admin";
+export function* deleteUserInfo(action: Action<string>,effects: DVA.EffectsCommandMap) {
+  console.log('deleteUserInfo')
+  let url = "https://wechatx.offerqueens.cn/super/user/delete?name=admin&&password=admin";
   // let url = "http://127.0.0.1:7979/camp/user/add?name=admin&&password=admin";
   // console.log(action.payload + `${params}`)
   console.log(action.payload)
@@ -27,23 +27,35 @@ export function* addNewUsers(action: Action<string>,effects: DVA.EffectsCommandM
   // })()
 
   const backendData:BackendResponse = response.data
-  // console.log('response',response)
-  // console.log('backdata',backendData)
+  console.log('response',response)
+  console.log('backdata',backendData)
   if (!response || response.err || !backendData || 200 !== backendData.state){
     message.error('出错啦')
     return null
   }
   console.log('backData',backendData)
-  message.success("添加用户成功")
-  yield effects.put(updateNewUsersAction())
+  message.success("删除用户成功")
+  yield effects.put(updateDeleteUserAction(action.payload))
 }
 
-export function updateNewUsersAction() {
-  return createAction("updateNewUsers")()
+export function updateDeleteUserAction(payload: string) {
+  console.log('updateDeleteUser')
+  return createAction<string>("updateDeleteUser")(payload)
 }
 
-export function updateNewUsers(state: UserState, action: null) {
+export function updateDeleteUser(state: UserState, action: string) {
+  // console.log(action)
   let newState = {...state}
+  let userInfos = newState.userInfos
+  const userId = action.payload
+  for (let i=0;i<userInfos.length;i++){
+    if (userInfos[i]._id == userId){
+      let user = userInfos[i]
+      userInfos.splice(i,1)
+    }
+  }
+  console.log(userInfos)
+  newState.userInfos = userInfos
   return newState
 }
 

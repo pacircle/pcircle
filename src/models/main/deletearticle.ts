@@ -12,7 +12,8 @@ export function deleteArticlesInfoAction(id:string) {
 export function* deleteArticlesInfo(action: Action<string>, effects: DVA.EffectsCommandMap) {
 
   let response:RequestResponse = yield (() => {
-    return requests(`http://127.0.0.1:7979/super/article/delete?name=admin&&password=admin&&articleId=${action.payload}`)
+    // return requests(`http://127.0.0.1:7979/super/article/delete?name=admin&&password=admin&&articleId=${action.payload}`)
+    return requests(`https://wechatx.offerqueens.cn/super/article/delete?name=admin&&password=admin&&articleId=${action.payload}`)
   })()
 
   let BackendResponse: BackendResponse = response.data
@@ -33,6 +34,6 @@ export function deleteArticle(state: MainState, action: Action<string>) {
   let id = action.payload
   let articles = newState.articles
   newState.articles = articles.filter(item => item._id.$oid !== id)
-  message.success('删除成功')
+  message.success('删除文章成功')
   return newState
 }

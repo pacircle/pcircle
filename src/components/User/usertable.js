@@ -4,6 +4,7 @@ import { Table, Input, Button, Icon, Popconfirm, Avatar } from 'antd';
 import Highlighter from 'react-highlight-words'
 import { hashHistory } from "react-router";
 import { changeMenuKeysAction } from "../../models/main/changeMenuKeys";
+import {deleteUserInfo, deleteUserInfoAction} from "../../models/user/deleteUserInfo";
 // const FormItem = Form.Item
 // const EditableContext = React.createContext()
 // const EditableRow = ({ form, index, ...props}) => (
@@ -95,6 +96,7 @@ class UserTable extends React.Component {
     //   data: dataSource.filter(item => item.key != key)
     // })
     console.log(key)
+    this.props.dispatch(deleteUserInfoAction(key))
   }
 
   handleClick = (key) => {

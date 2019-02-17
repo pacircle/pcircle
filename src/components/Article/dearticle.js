@@ -1,4 +1,5 @@
 import { Comment, Avatar, Collapse, Button } from 'antd';
+import {deleteCommentInfoAction} from "../../models/main/deletecomment";
 const Panel = Collapse.Panel;
 
 const Answer = ({ children, comments }) => (
@@ -35,7 +36,13 @@ const Answer = ({ children, comments }) => (
 //   )
 // }
 
-const Comments = ({ commentList }) => {
+
+const Comments = ({ commentList, dispatch }) => {
+  const handleDelete = (id) => {
+    console.log(id)
+    dispatch(deleteCommentInfoAction(id))
+  }
+
   return (
     <div>
       <Collapse bordered={false}>
@@ -43,9 +50,9 @@ const Comments = ({ commentList }) => {
           {commentList.map((items) => {
             // console.log(items)
               return (
-                <Answer comments={items} key={items.id}>
+                <Answer comments={items} key={items._id.$oid}>
                   {/*{items.answers ? <Answers answer={items.answers} /> : null}*/}
-                  <Button type="primary">评论删除</Button>
+                  <Button type="primary" onClick={handleDelete.bind(this, items._id.$oid)}>评论删除</Button>
                 </Answer>
               )
           })}

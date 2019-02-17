@@ -14,6 +14,7 @@ import {style} from "typestyle"
 
 import {Menu,Icon,Layout,Card} from 'antd';
 import {queryNowAddressAction} from "../../models/rotate/querynowaddress";
+import {changeMenuKeysAction} from "../../models/main/changeMenuKeys";
 declare function require(path: string): any;
 type RotateProps = RotateModelState
 
@@ -26,7 +27,9 @@ class Rotate extends React.Component<RotateProps & RotateDispatcherProps, {}> {
 
 
   componentDidMount(){
-    this.props.dispatch(queryNowAddressAction('http://127.0.0.1:7979/super/rotate/index'))
+    // this.props.dispatch(queryNowAddressAction('http://127.0.0.1:7979/super/rotate/index'))
+    this.props.dispatch(queryNowAddressAction('https://wechatx.offerqueens.cn/super/rotate/index'))
+    this.props.dispatch(changeMenuKeysAction(["7", "sub4"]))
   }
 
   render() {
@@ -39,15 +42,15 @@ class Rotate extends React.Component<RotateProps & RotateDispatcherProps, {}> {
           {/*<Upitem/>*/}
           <Card
             hoverable
-            style={{ width: 500 }}
+            style={{ width: 600 }}
             cover={<img alt="example" src={wechat} />}
           >
             <Meta
-              title="当前对应文章网址"
+              title="当前对应文章内容"
               description={this.props.addressProp? `${this.props.addressProp.address}`:"暂无当前网址"}
             />
           </Card>
-          <UrlAdd dispatch={this.props.dispatch}/>
+          <UrlAdd dispatch={this.props.dispatch} />
         </Mainview>
       </div>
     )

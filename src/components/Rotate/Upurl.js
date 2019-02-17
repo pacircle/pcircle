@@ -12,7 +12,7 @@ const formItemLayout = {
     sm: { span: 12 },
   },
 };
-
+const { TextArea } = Input;
 class Upurl extends React.Component {
   state = {
     fields: {
@@ -30,16 +30,11 @@ class Upurl extends React.Component {
         return;
       }
       console.log(fieldsValue)
-      // const data = {
-      //   address: fieldsValue['answer-content']
-      // }
-      // console.log(data)
+      const data = {
+        address: fieldsValue['answer-content']
+      }
+      console.log(data)
       this.props.dispatch(addNewAddressAction(fieldsValue['answer-content']))
-      // const data = {
-      //   campId: this.props.campId,
-      //   content: fieldsValue['answer-content']
-      // }
-      // this.props.dispatch(addNewAnswerAction(data))
     });
   }
 
@@ -50,19 +45,19 @@ class Upurl extends React.Component {
 
         <Form.Item
           {...formItemLayout}
-          label="对应文章地址："
+          label="图片对应网址："
         >
           {/*<span className="ant-form-text">训练营题目优质答案：</span>*/}
           {getFieldDecorator('answer-content', {
             rules: [{
               required: true,
-              message: '请填入更新的图片对应文章地址',
+              message: '请输入图片对应网址',
             }],
           })(
-            <Input />
+            <TextArea style={{marginTop: '20px'}} rows={4} />
           )}
         </Form.Item>
-        <Button type="primary" htmlType="submit">添加图片对应文章地址</Button>
+        <Button type="primary" htmlType="submit" style={{marginTop: '20px'}}>添加图片对应网址内容</Button>
       </Form>)
   }
 }

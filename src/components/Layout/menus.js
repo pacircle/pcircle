@@ -70,17 +70,19 @@ class Menuss extends React.Component {
         >
           <Menu.SubMenu key={"sub1"} title={<span><Icon type="file-text" /><span>文章及评论管理</span></span>}>
             <Menu.Item key={"1"}><Link to={"/main"}>文章及评论</Link></Menu.Item>
+            <Menu.Item key={"2"}><Link to={"/article"}>文章添加</Link></Menu.Item>
           </Menu.SubMenu>
           <Menu.SubMenu key={"sub2"} title={<span><Icon type="user" /><span>用户管理</span></span>}>
-            <Menu.Item key="2"><Link to={"/user"}>所有用户信息查看</Link></Menu.Item>
-            <Menu.Item key="3"><Link to={{ pathname: "/usdetail" }}>用户详细信息</Link></Menu.Item>
+            <Menu.Item key="3"><Link to={"/user"}>所有用户信息查看</Link></Menu.Item>
+            <Menu.Item key="4"><Link to={{ pathname: "/usdetail" }}>用户详细信息</Link></Menu.Item>
           </Menu.SubMenu>
           <Menu.SubMenu key={"sub3"} title={<span><Icon type="database" /><span>训练营管理</span></span>}>
-            <Menu.Item key="4"><Link to={"/camp"}>训练营素材管理</Link></Menu.Item>
-            <Menu.Item key="5"><Link to={"/camuser"}>训练营用户管理</Link></Menu.Item>
+            <Menu.Item key="5"><Link to={"/camp"}>训练营素材管理</Link></Menu.Item>
+            <Menu.Item key="6"><Link to={"/camuser"}>训练营用户管理</Link></Menu.Item>
+            {/*<Menu.Item key="6"><Link to={"/recommend"}>训练营二维码管理</Link></Menu.Item>*/}
           </Menu.SubMenu>
           <Menu.SubMenu key={"sub4"} title={<span><Icon type="laptop" /><span>首页广告管理</span></span>}>
-            <Menu.Item key="6"><Link to={"/rotate"}>首页素材管理</Link></Menu.Item>
+            <Menu.Item key="7"><Link to={"/rotate"}>首页素材管理</Link></Menu.Item>
           </Menu.SubMenu>
           {/*<Menu.SubMenu key={"sub4"} title={<span><Icon type="picture" /><span>首页文章管理</span></span>}>*/}
             {/*<Menu.Item key="5"><Link to={"/recommend"}>文章及图片显示</Link></Menu.Item>*/}

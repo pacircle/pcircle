@@ -6,6 +6,7 @@ import { addNewCampAction, campItem } from "../../models/camp/addNewCamp";
 
 let id = 0;
 const { RangePicker } = DatePicker;
+const { TextArea } = Input;
 const formItemLayout = {
   labelCol: {
     xs: { span: 24 },
@@ -92,7 +93,7 @@ class TimeRange extends React.Component {
               message: '请填入训练营题目',
             }],
           })(
-            <Input />
+            <TextArea />
           )}
         </Form.Item>
         <Form.Item
@@ -105,7 +106,7 @@ class TimeRange extends React.Component {
               message: '请填入训练营描述',
             }],
           })(
-            <Input />
+            <TextArea />
           )}
         </Form.Item>
         <Form.Item

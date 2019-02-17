@@ -15,6 +15,7 @@ import {style} from "typestyle"
 
 import {Menu,Icon,Layout} from 'antd';
 import {queryAllCampAction} from "../../models/camp/queryAllCamp";
+import {changeMenuKeysAction} from "../../models/main/changeMenuKeys";
 
 declare function require(path: string): any;
 type CampProps = CampModelState
@@ -27,7 +28,9 @@ class Camp extends React.Component<CampProps & MainDispatcherProps, {}> {
 
 
   componentDidMount(){
-    this.props.dispatch(queryAllCampAction("http://127.0.0.1:7979/camp/all"))
+    // this.props.dispatch(queryAllCampAction("http://127.0.0.1:7979/camp/all"))
+    this.props.dispatch(queryAllCampAction("https://wechatx.offerqueens.cn/camp/all"))
+    this.props.dispatch(changeMenuKeysAction(["5", "sub3"]))
   }
 
 
